@@ -1,8 +1,9 @@
 # ttfx
 
 This is a test repository to see how fast an independent C# port of ttfx can get
-compared with Rust and Python. The original Rust project and its documentation
-are preserved below.
+compared with Rust and Python. The original Rust project is
+[omacom/ttfx](https://github.com/omacom/ttfx); its documentation is preserved
+below.
 
 ## C# performance comparison
 
