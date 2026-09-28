@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Ttfx.Core/Ttfx.Core.csproj" />
+    <Project Path="src/Ttfx.Cli/Ttfx.Cli.csproj" />
+  </Folder>
+  <Folder Name="/tests/"><Project Path="tests/Ttfx.Tests/Ttfx.Tests.csproj" /></Folder>
+  <Folder Name="/tools/"><Project Path="tools/probes/MathProbe.csproj" /></Folder>
+  <Folder Name="/benchmarks/"><Project Path="benchmarks/Ttfx.Benchmarks/Ttfx.Benchmarks.csproj" /></Folder>
+</Solution>

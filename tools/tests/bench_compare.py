@@ -14,6 +14,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import os
 import platform
 import shlex
@@ -123,6 +124,10 @@ def main() -> None:
         if args.json:
             args.json.write_text(json.dumps(report, indent=2) + "\n")
     ratios = [result["speedup"] for result in report["results"].values()]
+    report["geometric_mean_speedup"] = math.exp(statistics.mean(math.log(ratio) for ratio in ratios))
+    print(f"Geometric mean speedup: {report['geometric_mean_speedup']:.3f}x")
+    if args.json:
+        args.json.write_text(json.dumps(report, indent=2) + "\n")
     print(f"Median effect speedup: {statistics.median(ratios):.3f}x")
 
 

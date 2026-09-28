@@ -2,4 +2,6 @@
 /tools/parity/inputs/
 __pycache__/
 .claude/
-/reference/tte/
+/reference/tte
+/plans/
+/reviews/

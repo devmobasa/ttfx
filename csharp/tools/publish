@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+revision=$(git rev-parse HEAD)
+if [ -n "$(git status --porcelain)" ]; then revision="$revision-dirty"; fi
+if [ "$#" = 0 ]; then set -- x86-64-v2 x86-64-v3 x86-64-v4; fi
+for instruction_set in "$@"; do
+    case "$instruction_set" in x86-64-v2|x86-64-v3|x86-64-v4) ;; *) echo "unsupported tier: $instruction_set" >&2; exit 2 ;; esac
+    dotnet publish src/Ttfx.Cli -c Release -r linux-x64 -p:PublishAot=true -p:UseSharedCompilation=false --disable-build-servers \
+        "-p:IlcInstructionSet=$instruction_set" "-p:SourceRevision=$revision" \
+        -o "artifacts/linux-${instruction_set/x86-64/x64}"
+done

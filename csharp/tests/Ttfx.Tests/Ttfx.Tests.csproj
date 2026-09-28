@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsTestProject>true</IsTestProject>
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest" />
+    <ProjectReference Include="../../src/Ttfx.Core/Ttfx.Core.csproj" />
+  </ItemGroup>
+</Project>

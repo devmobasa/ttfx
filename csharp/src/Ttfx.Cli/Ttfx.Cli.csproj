@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>ttfx</AssemblyName>
+    <IsAotCompatible>true</IsAotCompatible>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OptimizationPreference>Speed</OptimizationPreference>
+    <IlcInstructionSet Condition="'$(IlcInstructionSet)' == ''">x86-64-v2</IlcInstructionSet>
+    <SourceRevision Condition="'$(SourceRevision)' == ''">unrecorded</SourceRevision>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Ttfx.Core/Ttfx.Core.csproj" />
+  </ItemGroup>
+  <Target Name="GenerateBuildIdentity" BeforeTargets="CoreCompile">
+    <WriteLinesToFile File="$(IntermediateOutputPath)BuildIdentity.g.cs" Overwrite="true" Lines="namespace Ttfx.Cli%3B internal static class BuildIdentity { internal const string Tier = &quot;$(IlcInstructionSet)&quot;%3B internal const string Sdk = &quot;11.0.100-rc.1.26425.128&quot;%3B internal const string Revision = &quot;$(SourceRevision)&quot;%3B }" />
+    <ItemGroup><Compile Include="$(IntermediateOutputPath)BuildIdentity.g.cs" /></ItemGroup>
+  </Target>
+</Project>

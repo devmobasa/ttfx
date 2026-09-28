@@ -11,6 +11,10 @@ export COLUMNS=80 LINES=24
 pass=0
 fail=0
 failed_cases=()
+TMPROOT="${ORACLE_TMP:-target/csharp-m0-tmp}"
+mkdir -p "$TMPROOT" || exit 2
+work=$(mktemp -d "$TMPROOT/run.XXXXXX") || exit 2
+trap 'rm -rf "$work"' EXIT
 
 inputs_dir=tools/parity/inputs
 mkdir -p "$inputs_dir"
@@ -47,26 +51,21 @@ for input in "$inputs_dir"/*.txt; do
   for variant in "${!variants[@]}"; do
     opts=${variants[$variant]}
     name="$(basename "$input" .txt)/$variant"
-    py_out=$($PY $opts < "$input" 2>&1)
+    $PY $opts < "$input" > "$work/python.out" 2> "$work/python.err"
     py_rc=$?
-    rust_out=$($RUST --m0-dump $opts < "$input" 2>&1)
+    "$RUST" --m0-dump $opts < "$input" > "$work/candidate.out" 2> "$work/candidate.err"
     rust_rc=$?
-    if [ "$py_rc" -ne "$rust_rc" ]; then
+    if [ "$py_rc" -ne 0 ] || [ "$rust_rc" -ne 0 ]; then
       fail=$((fail + 1))
-      failed_cases+=("$name (exit: py=$py_rc rust=$rust_rc)")
-      continue
-    fi
-    if [ "$py_rc" -ne 0 ]; then
-      pass=$((pass + 1))  # both errored: condition parity
-      continue
-    fi
-    if [ "$py_out" == "$rust_out" ]; then
+      failed_cases+=("$name (must succeed: py=$py_rc candidate=$rust_rc)")
+    elif cmp -s "$work/python.out" "$work/candidate.out" && cmp -s "$work/python.err" "$work/candidate.err"; then
       pass=$((pass + 1))
     else
       fail=$((fail + 1))
       failed_cases+=("$name")
       if [ "${VERBOSE:-0}" == "1" ]; then
-        diff <(printf '%s' "$py_out" | cat -A) <(printf '%s' "$rust_out" | cat -A) | head -20
+        diff -u "$work/python.out" "$work/candidate.out" | head -20
+        diff -u "$work/python.err" "$work/candidate.err" | head -20
       fi
     fi
   done

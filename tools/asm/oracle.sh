@@ -23,6 +23,34 @@ set -u
 
 ROOT="$(CDPATH= cd -- "$(dirname -- "$0")/../.." && pwd)"
 BIN="${BIN:-$ROOT/target/release/ttfx}"
+ADAPTER=0
+if [ -n "${REFERENCE_BIN:-}" ] || [ -n "${CANDIDATE_BIN:-}" ]; then
+    if [ -z "${REFERENCE_BIN:-}" ] || [ -z "${CANDIDATE_BIN:-}" ]; then
+        echo "oracle: REFERENCE_BIN and CANDIDATE_BIN must both be set" >&2
+        exit 2
+    fi
+    for selected in "$REFERENCE_BIN" "$CANDIDATE_BIN"; do
+        if [ ! -x "$selected" ]; then
+            echo "oracle: binary is not executable: $selected" >&2
+            exit 2
+        fi
+    done
+    ADAPTER=1
+else
+    REFERENCE_BIN="$BIN"
+    CANDIDATE_BIN="$BIN"
+fi
+
+reference_run() {
+    if [ "$ADAPTER" = 1 ]; then "$REFERENCE_BIN" "$@"
+    else TTFX_ASM=0 "$REFERENCE_BIN" "$@"
+    fi
+}
+candidate_run() {
+    if [ "$ADAPTER" = 1 ]; then "$CANDIDATE_BIN" "$@"
+    else TTFX_ASM=force "$CANDIDATE_BIN" "$@"
+    fi
+}
 EFFECT="${1:?usage: oracle.sh <effect> [quick|full]}"
 MODE="${2:-quick}"
 # Parity dumps get large and many oracles run at once: keep the scratch files
@@ -67,8 +95,8 @@ done
 
 # A forced tier the binary cannot run would fail every case the same way.
 TIER_NOTE=""
-if [ -n "${TTFX_ASM_TIER:-}" ]; then
-    if ! TTFX_ASM=force "$BIN" --frame-rate 0 print < "$WORK/single" > /dev/null 2> "$WORK/tier.err"; then
+if [ -n "${TTFX_ASM_TIER:-}" ] && { [ "$ADAPTER" = 0 ] || [ "${TTFX_ASM:-}" = force ]; }; then
+    if ! TTFX_ASM=force "$REFERENCE_BIN" --frame-rate 0 print < "$WORK/single" > /dev/null 2> "$WORK/tier.err"; then
         echo "oracle: TTFX_ASM_TIER=$TTFX_ASM_TIER is not available: $(cat "$WORK/tier.err")" >&2
         exit 2
     fi
@@ -82,8 +110,8 @@ global=()
 check() {
     local name="$1"; shift
     local input="$1"; shift
-    TTFX_ASM=0 "$BIN" "${global[@]}" "$@" < "$input" > "$WORK/r.out" 2> "$WORK/r.err"; local rs=$?
-    TTFX_ASM=force "$BIN" "${global[@]}" "$@" < "$input" > "$WORK/a.out" 2> "$WORK/a.err"; local as=$?
+    reference_run "${global[@]}" "$@" < "$input" > "$WORK/r.out" 2> "$WORK/r.err"; local rs=$?
+    candidate_run "${global[@]}" "$@" < "$input" > "$WORK/a.out" 2> "$WORK/a.err"; local as=$?
     if [ "$must_succeed" = 1 ] && [ $rs -ne 0 ]; then
         fail=$((fail + 1))
         echo "FAIL $name: the Rust engine exited $rs, so this case tests nothing: $(head -c 200 "$WORK/r.err")"
@@ -118,7 +146,7 @@ if [ -f "$ROOT/tools/asm/cases/$EFFECT.txt" ]; then
         expect_error=0
         case "$line" in '!'*) expect_error=1; line="${line#!}"; line="${line# }" ;; esac
         # shellcheck disable=SC2086
-        TTFX_ASM=0 "$BIN" "${global[@]}" --seed 1 --frame-rate 0 "$EFFECT" $line < "$WORK/basic" > /dev/null 2> "$WORK/v.err"
+        reference_run "${global[@]}" --seed 1 --frame-rate 0 "$EFFECT" $line < "$WORK/basic" > /dev/null 2> "$WORK/v.err"
         vs=$?
         if [ $expect_error -eq 0 ] && [ $vs -ne 0 ]; then
             fail=$((fail + 1))

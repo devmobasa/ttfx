@@ -1,0 +1,4120 @@
+{
+  "started_utc": "2026-09-28T09:25:49Z",
+  "rust_revision": "54d21f046f22512b113056a1964077d7b7bf04cc",
+  "python_revision": "7a91dd9",
+  "compiled_repeats": 7,
+  "compiled_warmups": 2,
+  "python_repeats": 3,
+  "python_separate_batch": true,
+  "large_rust_stdout_from_verified_pinned_binary_and_matching_input": true,
+  "machine": "16-core processor (Linux)",
+  "cpu_affinity": 8,
+  "source_sha256": {
+    "src/Ttfx.Cli/Application.cs": "26e275fd9cae0a22c3983db3f7b7eb369f5dac2d7c9a6582f6ac591a357a1c28",
+    "src/Ttfx.Cli/CommandRegistry.Metadata.cs": "2d941ada36ced7c0aee7919b0475ad34ea78d4b5c0f033493f5932e94e77ff31",
+    "src/Ttfx.Cli/CommandRegistry.cs": "b2bcfb0aa713d6c474f1521450c409c4008479476034e1bd3d871520c2f11844",
+    "src/Ttfx.Cli/CompletionGenerator.cs": "545e375e49ae20bf4cb64695319c6db0ca408ca806fa3ad477326a56e6151912",
+    "src/Ttfx.Cli/OptionBindings.cs": "7b75ecccb07f133a1745b45687075c3c6d05dd07df825a13d2e252c40dda549b",
+    "src/Ttfx.Cli/Options.cs": "62b0e5f5622dea879c2f65ed9bacf1a093535b0999f09ab9a68f7d1e342013c8",
+    "src/Ttfx.Cli/Program.cs": "21c5f320464827b2d9740dd409ec32832b6ec129565737f944742827194dd1b6",
+    "src/Ttfx.Cli/Ttfx.Cli.csproj": "c7520452f866da13d4c241505d5d32e9dbd9dd553d3c9b91ff25b32f9a4914fc",
+    "src/Ttfx.Cli/UnixFrameWriter.cs": "b795c6323f4209a7720e5e471bfc8667a47e790b0e2d900448d33c8b6cf102f1",
+    "src/Ttfx.Cli/UnixIo.cs": "8e92c78339abe729d9dfbf379e151354ce7c6180834ec33e24e72fff891c91cf",
+    "src/Ttfx.Cli/UnixProcess.cs": "7bf10bbf21ef7c459b882f58320c78d22ca1d6f97dab8fb79c32bdc812f91208",
+    "src/Ttfx.Core/Decrypt.cs": "fb66813b63b9cde7ebcdd3048f19bd99f29e955c27cb250000c7d6cce61aea99",
+    "src/Ttfx.Core/Easing.cs": "633817cdf6e853ea5cfe6371e4e3d2821f2df9822de8f6cec5f1412c52fb51b8",
+    "src/Ttfx.Core/Effects/Beams.cs": "8d8400524888d22566c846ee2e68efb220af2135b8043e43e36eecfd598976f4",
+    "src/Ttfx.Core/Effects/BinaryPath.cs": "af2cff7a93d8a7a9194cabe5f60920f0f761c580dd9a82d0e6de39af0bb188e6",
+    "src/Ttfx.Core/Effects/Blackhole.cs": "81033105e72c311e9d2ce7c7a45eeb031940833dbe1f0c585cf24b816e747a03",
+    "src/Ttfx.Core/Effects/BouncyBalls.cs": "df5fea5ab1ec21143a2615b0da316ed27beb0922d6be512bfedbbd29242188fe",
+    "src/Ttfx.Core/Effects/Bubbles.cs": "c46d6b31731bc501684020c531f478752a26096fc0b54b477a0d5708213c7bf0",
+    "src/Ttfx.Core/Effects/Burn.cs": "f93c9ea9af13832a08867d7ac86ab04df629f3e2c699b8d0f864e50cc8ba81d6",
+    "src/Ttfx.Core/Effects/ColorShift.cs": "1696308b1c40379111c98d1a51a520a2cafede9f5c4bca23a4a915044522a8c2",
+    "src/Ttfx.Core/Effects/Crumble.cs": "4213233a74f63a4da4badae7b1e187b7e9b9cdffc4093716994c3db172af7d9f",
+    "src/Ttfx.Core/Effects/EffectBase.cs": "64ceeddfc710d0e5c6cfd48b3890ac47b96f556a2cd661b7340a11cc5136cda8",
+    "src/Ttfx.Core/Effects/ErrorCorrect.cs": "6ac02f311dad287990e1420c1358df897a6bb2f958c2ba608daa7431f519c025",
+    "src/Ttfx.Core/Effects/Expand.cs": "2161c7f3744e682ae7a4c55f2a52a52cd629f1c42d595f16c85f2d1e6c03a37f",
+    "src/Ttfx.Core/Effects/Fireworks.cs": "0dbd1553e263bf06acc2bd02b28b642b053d1de4609848c6d300d8b3ce5dce9c",
+    "src/Ttfx.Core/Effects/Highlight.cs": "635df25e4cf7d9d9a43f7b9adcca8ca9ca0c57679310e77093e311dcde390b59",
+    "src/Ttfx.Core/Effects/LaserEtch.cs": "fbfeefd037f4ef3ed23b0277b9ebb59bb2144b7cdb5dda7185211814269a5462",
+    "src/Ttfx.Core/Effects/Matrix.cs": "0819a465a676002f824ddbe02e01cd2c8c571dcbfed139bf39998d2d06098bcc",
+    "src/Ttfx.Core/Effects/MiddleOut.cs": "f9c5ddb630feac548f376dddc254355d14d4eaced231308aa52ed1ffededf091",
+    "src/Ttfx.Core/Effects/OrbittingVolley.cs": "ee58a1432752a906b7f560a6e19493c577e398fad1814b345d94d2ee9d78d7e3",
+    "src/Ttfx.Core/Effects/Overflow.cs": "b6e9b872cb2389c1e4bf5cf92fee3b5517dbda30ca8d996314448c1881fccf4b",
+    "src/Ttfx.Core/Effects/Pour.cs": "9976bb5cee4c915a75cd45e06d1f655ce9c182cf7f3834d00d19b6349492bb24",
+    "src/Ttfx.Core/Effects/PrintEffect.cs": "7ec32e5881d02cbc34d51259926c6949c2507bb50d7d90d4bc62c69d26954823",
+    "src/Ttfx.Core/Effects/Rain.cs": "bd094b4cd65453540e6762bac6ca5bebc76fc019eb2dc39e98ee4b7934f77a10",
+    "src/Ttfx.Core/Effects/RandomSequence.cs": "7aa1bad8d572acae99d26fbd4daab9be355580fbd710b2faebf89bc5ad4b29ae",
+    "src/Ttfx.Core/Effects/Rings.cs": "19a1fe403f78c18d237f3f3d061cafad45f10952fd3e19f306f5f8a75a547df8",
+    "src/Ttfx.Core/Effects/Scattered.cs": "02dc1c62e696599a88bb95b0a9057dcc16a56115adaece53b404ae86f01502c0",
+    "src/Ttfx.Core/Effects/Slice.cs": "8fc77a15bdaacd03d89760ed17a0bd86a634fd80af989a1b7a726ba3a369fe13",
+    "src/Ttfx.Core/Effects/Smoke.cs": "b6b5aac24ca9b3e175bca55916edc62fae4bc77409e7446f6098f6b5dd2e28ab",
+    "src/Ttfx.Core/Effects/Spotlights.cs": "6cb759d717adf0ba090f597e2dcd6a2d3afbfa484d8a817120163d1c27b24b19",
+    "src/Ttfx.Core/Effects/Spray.cs": "5b27ba7a7e08c0fb71eff010805d07f70df005013009fdba0dd50a742bbccc4a",
+    "src/Ttfx.Core/Effects/Swarm.cs": "9bd0d8040dbc9df2f2a1fcc0843146cd7fc68b782bb0f5351c4e5d69fd3ece15",
+    "src/Ttfx.Core/Effects/Sweep.cs": "5e28eebf5422a3ef0f2a9148b244ae79e6e58f0f1929cec4e70e89ab89267349",
+    "src/Ttfx.Core/Effects/SynthGrid.cs": "1f184d9d5cf567861c75c34e22b815709c0e9a60c330259b78e736161d552172",
+    "src/Ttfx.Core/Effects/Thunderstorm.cs": "34e29d658ccdbff18f34c04d54dce304c9e35d55010a499d5fb28da026dfdf2e",
+    "src/Ttfx.Core/Effects/Unstable.cs": "f8a06683a631e507ac4ee82907014e0c32deba32318e4b07e7ba2c5d80f1d4a3",
+    "src/Ttfx.Core/Effects/VhsTape.cs": "db2699e7dbdab8da932d1d817dde1be09292e07351597f2279d292b79c21ef24",
+    "src/Ttfx.Core/Effects/Waves.cs": "97e05a557811ba1d04aaeb221be37d70518597c63b1ecd6669dc74f9bcddaa55",
+    "src/Ttfx.Core/Engine/Engine.Characters.cs": "5c9c19328670b98925ac94747e3b75050345552a2af4c805f2989a53fb2f7a1c",
+    "src/Ttfx.Core/Engine/Engine.Motion.cs": "d1582856b459e71554fd073ed9bdabfe9bb1022e8b8591072d67b73c7ef87492",
+    "src/Ttfx.Core/Engine/Engine.cs": "067658a5c0e098110f8db242d93f5e9d53ceb900864555f5c781e6aec591db75",
+    "src/Ttfx.Core/Engine/EngineClock.cs": "9c7843371ef6ec512e4fbfab349f8e3d35ddd5031d34c3b5896e4c6201c3ca06",
+    "src/Ttfx.Core/Engine/ParticlePool.cs": "78a9de9a07ba820dcd2ab3a4abcf83e29310cf96a018f79cdcdfac557bbc1c5a",
+    "src/Ttfx.Core/Engine/Path.cs": "5e17bee03639b1de2e4fd0ef62a43a19e00d4e3c7129d8f9465e42eacc802a18",
+    "src/Ttfx.Core/Engine/PrimsWeighted.cs": "74c910ab907ce1fd4a97ab01cc83f63c28e19c899ed87c67c56cdbbf80e6a655",
+    "src/Ttfx.Core/Engine/Scene.cs": "a49faeb95bea488484cc3b7bfa08c9fdb4ba08ab99050092c61de6027a2bf8ff",
+    "src/Ttfx.Core/Engine/SlotStore.cs": "7f644ffff6acb562b6e770724aea5b912df30138252d7b1eaf6e06965d03f6be",
+    "src/Ttfx.Core/Engine/SpanningTree.cs": "88798405506a703092ebb014286f18c65846f91fccd84b16ffe554023afc8f82",
+    "src/Ttfx.Core/EngineRng.cs": "9a84cae565439bc3c4a98f0eea973dd54ab9ac771130fcccf5a2815973d65ef6",
+    "src/Ttfx.Core/Geometry.cs": "3e114b40d636117a446bf5227adcc64329620ce59563da1235abaa87f3fda548",
+    "src/Ttfx.Core/Graphics.cs": "e20eb6d8277046c643af8e83e0be7a38764a67e6d0003783cdf55cea117fea89",
+    "src/Ttfx.Core/IEffect.cs": "4fa662207156188bd98d626a75521d8fd90a344ea44754e601e27ea9f44bc479",
+    "src/Ttfx.Core/Input.cs": "62683469f1f2602961bb0f4e0d05c702925a5748b77802c090c258805687d742",
+    "src/Ttfx.Core/Numbers.cs": "e08d89d2e62dc0ca3298222b7dcd3e5c100841c65725ecd079219f38bc7e23fb",
+    "src/Ttfx.Core/OrderedQueue.cs": "91eab6dc24ed8ad5cfaad29c6f7c3acfcd0c65ca788ecdbfdf61118548649733",
+    "src/Ttfx.Core/OrderedSelection.cs": "5f6543c82e046a43f0bec82449abe9f70cc13b71e1130e08bf0e3af79c25f72d",
+    "src/Ttfx.Core/RustMath.cs": "c613214c15a31a204987e222c6cc9d0636cfd61ac3cbc13db379acc2f23f20af",
+    "src/Ttfx.Core/Slide.cs": "7296bb991d55f0904be19af95a5bb4c150b2fd422e9e49e6a7bf0be53559ae77",
+    "src/Ttfx.Core/Terminal.cs": "2caeedf67da87d1840e27000a51f7f009b492c1368b21b4759ca501299739a8e",
+    "src/Ttfx.Core/TerminalConfig.cs": "6970cc76408a37655b82180777401bd6bb49b0cc76576c07b9c76f5297af5deb",
+    "src/Ttfx.Core/Ttfx.Core.csproj": "976248c0a7bcc4147b9897bbd71424220baf0028a84595e1d4cd5b8071f6d1b6",
+    "src/Ttfx.Core/Wipe.cs": "6f7327f1572ff58c708fafc48de3fb1dbf2af4a966a3ddabd25bdfe3ad14d0d9"
+  },
+  "binary_sha256": {
+    "rust033": "6377be34c403bb04377e8294b7038acb0eccfde856758a18b3a0d9b4323fc98c",
+    "v2": "a983228f43579ad9303f909c5acf06bae1a3810633487c9f353a3fef7a06783e",
+    "v3": "3cca707d67dcefa54204e669e7c7089372c80b53f810534ae45d553ae521e969",
+    "v4": "313381b8b1639fdd18a61526eb2663af374eb922b0e252ba2c754b4fed438ad7"
+  },
+  "environment": {
+    "TTFX_ASM": "0",
+    "TTFX_THREADS": "1",
+    "DOTNET_PROCESSOR_COUNT": "1",
+    "DOTNET_gcServer": "0"
+  },
+  "sizes": {
+    "200x50": {
+      "input_sha256": "0124900b73d47b1304bbcdb5348bed5781ea6b30e9b8ece0603d2c519919ed12",
+      "input_bytes": 9061,
+      "results": {
+        "beams": {
+          "outputs": {
+            "rust033": {
+              "length": 116988286,
+              "sha256": "9da7f3509e92818e7c50cefd872e4ee2642318ffb08c43e24879e20554469a35"
+            },
+            "v2": {
+              "length": 116988286,
+              "sha256": "9da7f3509e92818e7c50cefd872e4ee2642318ffb08c43e24879e20554469a35"
+            },
+            "v3": {
+              "length": 116988286,
+              "sha256": "9da7f3509e92818e7c50cefd872e4ee2642318ffb08c43e24879e20554469a35"
+            },
+            "v4": {
+              "length": 116988286,
+              "sha256": "9da7f3509e92818e7c50cefd872e4ee2642318ffb08c43e24879e20554469a35"
+            },
+            "python": {
+              "length": 139061559,
+              "sha256": "b1e68d927f72e7178e523709739e2e245db3302e291ebd64ada08881da3efabb",
+              "verification_seconds": 21.82988156000647
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              266.962669,
+              260.032614,
+              262.857733,
+              260.092384,
+              264.50044,
+              265.914596,
+              286.401618
+            ],
+            "v2": [
+              120.986604,
+              122.052265,
+              121.790102,
+              124.977127,
+              177.77863,
+              126.395242,
+              163.181801
+            ],
+            "v3": [
+              123.707404,
+              124.816085,
+              124.212328,
+              124.716734,
+              204.016895,
+              171.316729,
+              144.559759
+            ],
+            "v4": [
+              119.304626,
+              121.632391,
+              123.235268,
+              121.245556,
+              123.063616,
+              130.271064,
+              136.011046
+            ],
+            "python": [
+              6868.503665,
+              6904.793781,
+              6861.038277
+            ]
+          },
+          "median_ms": {
+            "python": 6868.503665,
+            "rust033": 264.50044,
+            "v2": 124.977127,
+            "v3": 124.816085,
+            "v4": 123.063616
+          }
+        },
+        "binarypath": {
+          "outputs": {
+            "rust033": {
+              "length": 237376754,
+              "sha256": "a1871c744a62cb6aafbfa679fd814baea5a5444f9cc9eed49d12e19e2364bc55"
+            },
+            "v2": {
+              "length": 237376754,
+              "sha256": "a1871c744a62cb6aafbfa679fd814baea5a5444f9cc9eed49d12e19e2364bc55"
+            },
+            "v3": {
+              "length": 237376754,
+              "sha256": "a1871c744a62cb6aafbfa679fd814baea5a5444f9cc9eed49d12e19e2364bc55"
+            },
+            "v4": {
+              "length": 237376754,
+              "sha256": "a1871c744a62cb6aafbfa679fd814baea5a5444f9cc9eed49d12e19e2364bc55"
+            },
+            "python": {
+              "length": 233419814,
+              "sha256": "0ca6f95a65380a42822b478be9910178f9c1a0a9953b297ea6f1f5a549a3f842",
+              "verification_seconds": 57.589898240003095
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              816.058464,
+              814.912409,
+              816.129778,
+              804.911102,
+              813.908832,
+              819.302626,
+              826.926296
+            ],
+            "v2": [
+              769.854977,
+              753.683814,
+              752.557497,
+              759.413999,
+              770.599275,
+              762.158801,
+              760.311584
+            ],
+            "v3": [
+              781.029297,
+              764.931996,
+              768.684665,
+              774.743143,
+              780.995289,
+              771.663381,
+              774.934434
+            ],
+            "v4": [
+              765.73356,
+              764.211641,
+              769.223109,
+              778.484715,
+              774.200366,
+              777.848131,
+              763.54035
+            ],
+            "python": [
+              19124.577763,
+              19407.532727,
+              19198.532549
+            ]
+          },
+          "median_ms": {
+            "python": 19198.532549,
+            "rust033": 816.058464,
+            "v2": 760.311584,
+            "v3": 774.743143,
+            "v4": 769.223109
+          }
+        },
+        "blackhole": {
+          "outputs": {
+            "rust033": {
+              "length": 168885317,
+              "sha256": "b4581184ee9b432162de5bdcc0b85bf97db729d66b0bd866f0a59bc827ad63a7"
+            },
+            "v2": {
+              "length": 168885317,
+              "sha256": "b4581184ee9b432162de5bdcc0b85bf97db729d66b0bd866f0a59bc827ad63a7"
+            },
+            "v3": {
+              "length": 168885317,
+              "sha256": "b4581184ee9b432162de5bdcc0b85bf97db729d66b0bd866f0a59bc827ad63a7"
+            },
+            "v4": {
+              "length": 168885317,
+              "sha256": "b4581184ee9b432162de5bdcc0b85bf97db729d66b0bd866f0a59bc827ad63a7"
+            },
+            "python": {
+              "length": 165791789,
+              "sha256": "db9bd782218f071b39b32b89eed2225cd0541f809f5f4f28d0fd8d20cfbeaf83",
+              "verification_seconds": 34.86368983799912
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              396.264902,
+              397.957018,
+              401.093971,
+              395.430269,
+              400.253859,
+              402.104158,
+              395.927541
+            ],
+            "v2": [
+              396.840308,
+              398.081859,
+              398.509382,
+              397.589032,
+              403.691196,
+              402.974347,
+              401.011165
+            ],
+            "v3": [
+              402.262995,
+              399.011269,
+              400.0335,
+              403.673658,
+              396.492549,
+              398.800533,
+              401.623452
+            ],
+            "v4": [
+              398.682587,
+              398.249511,
+              403.546237,
+              401.565814,
+              400.046108,
+              401.696504,
+              397.578578
+            ],
+            "python": [
+              11715.467762,
+              11795.927688,
+              11941.702386
+            ]
+          },
+          "median_ms": {
+            "python": 11795.927688,
+            "rust033": 397.957018,
+            "v2": 398.509382,
+            "v3": 400.0335,
+            "v4": 400.046108
+          }
+        },
+        "bouncyballs": {
+          "outputs": {
+            "rust033": {
+              "length": 843138726,
+              "sha256": "4ec7fdfce5c07d13abd810037fb6b47fab67337dd7693ac0533751c574c0749b"
+            },
+            "v2": {
+              "length": 843138726,
+              "sha256": "4ec7fdfce5c07d13abd810037fb6b47fab67337dd7693ac0533751c574c0749b"
+            },
+            "v3": {
+              "length": 843138726,
+              "sha256": "4ec7fdfce5c07d13abd810037fb6b47fab67337dd7693ac0533751c574c0749b"
+            },
+            "v4": {
+              "length": 843138726,
+              "sha256": "4ec7fdfce5c07d13abd810037fb6b47fab67337dd7693ac0533751c574c0749b"
+            },
+            "python": {
+              "length": 844160555,
+              "sha256": "5d75f62a19e0cb4dcf62759355b0449270f69dcdbee3d1cc7ed673e2420c88dc",
+              "verification_seconds": 29.66987977100507
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              377.934722,
+              385.823236,
+              388.317672,
+              377.417814,
+              380.450215,
+              380.901459,
+              379.744387
+            ],
+            "v2": [
+              316.056968,
+              319.510583,
+              319.25963,
+              323.212311,
+              316.937963,
+              316.251375,
+              319.144956
+            ],
+            "v3": [
+              314.945435,
+              325.762591,
+              322.375314,
+              317.065396,
+              315.598459,
+              319.601001,
+              319.398559
+            ],
+            "v4": [
+              313.325847,
+              323.102112,
+              316.109206,
+              314.499938,
+              317.789282,
+              317.59505,
+              316.403836
+            ],
+            "python": [
+              9289.86842,
+              9370.713973,
+              9290.290292
+            ]
+          },
+          "median_ms": {
+            "python": 9290.290292,
+            "rust033": 380.450215,
+            "v2": 319.144956,
+            "v3": 319.398559,
+            "v4": 316.403836
+          }
+        },
+        "bubbles": {
+          "outputs": {
+            "rust033": {
+              "length": 1100432715,
+              "sha256": "2fb46af3e68894b1e437fd3aba11d4ce43d567c3618d2bdfb4a99052cc3f31c7"
+            },
+            "v2": {
+              "length": 1100432715,
+              "sha256": "2fb46af3e68894b1e437fd3aba11d4ce43d567c3618d2bdfb4a99052cc3f31c7"
+            },
+            "v3": {
+              "length": 1100432715,
+              "sha256": "2fb46af3e68894b1e437fd3aba11d4ce43d567c3618d2bdfb4a99052cc3f31c7"
+            },
+            "v4": {
+              "length": 1100432715,
+              "sha256": "2fb46af3e68894b1e437fd3aba11d4ce43d567c3618d2bdfb4a99052cc3f31c7"
+            },
+            "python": {
+              "length": 1148012593,
+              "sha256": "1dab3b6f59fc908ed44dd824361d483b865afa286bfed4ef3c0bcfe50c41440f",
+              "verification_seconds": 30.707977835001657
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              617.532955,
+              589.426144,
+              571.909933,
+              563.871146,
+              563.448348,
+              561.92784,
+              557.666524
+            ],
+            "v2": [
+              516.473375,
+              537.562546,
+              505.681413,
+              536.706274,
+              518.397816,
+              505.890481,
+              504.539264
+            ],
+            "v3": [
+              510.227587,
+              723.751731,
+              524.400926,
+              530.547048,
+              652.606783,
+              508.615939,
+              498.611202
+            ],
+            "v4": [
+              497.397189,
+              496.376838,
+              512.027392,
+              541.91224,
+              618.144985,
+              498.127838,
+              487.860506
+            ],
+            "python": [
+              14308.261701,
+              14377.712606,
+              14292.043647
+            ]
+          },
+          "median_ms": {
+            "python": 14308.261701,
+            "rust033": 563.871146,
+            "v2": 516.473375,
+            "v3": 524.400926,
+            "v4": 498.127838
+          }
+        },
+        "burn": {
+          "outputs": {
+            "rust033": {
+              "length": 542261826,
+              "sha256": "490b4cd1d9a02b69d77d0b67810dc34b5cae77ceca909bf7125fa9a089a83952"
+            },
+            "v2": {
+              "length": 542261826,
+              "sha256": "490b4cd1d9a02b69d77d0b67810dc34b5cae77ceca909bf7125fa9a089a83952"
+            },
+            "v3": {
+              "length": 542261826,
+              "sha256": "490b4cd1d9a02b69d77d0b67810dc34b5cae77ceca909bf7125fa9a089a83952"
+            },
+            "v4": {
+              "length": 542261826,
+              "sha256": "490b4cd1d9a02b69d77d0b67810dc34b5cae77ceca909bf7125fa9a089a83952"
+            },
+            "python": {
+              "length": 540860772,
+              "sha256": "ca9015efe6c11ce8771aa6a9e7ca978e8953df315d806b16e72c4b6b26e36e70",
+              "verification_seconds": 19.787606656995194
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              394.581465,
+              392.587593,
+              407.082147,
+              393.851916,
+              395.212599,
+              385.175912,
+              387.93703
+            ],
+            "v2": [
+              223.533088,
+              225.697991,
+              230.242958,
+              228.332207,
+              225.918352,
+              223.683757,
+              227.849341
+            ],
+            "v3": [
+              231.118259,
+              233.361912,
+              231.733155,
+              233.950218,
+              233.718275,
+              235.666305,
+              233.412931
+            ],
+            "v4": [
+              222.120952,
+              224.67783,
+              230.724994,
+              229.226298,
+              227.116614,
+              224.84693,
+              224.476036
+            ],
+            "python": [
+              12784.272921,
+              12803.73018,
+              12976.591413
+            ]
+          },
+          "median_ms": {
+            "python": 12803.73018,
+            "rust033": 393.851916,
+            "v2": 225.918352,
+            "v3": 233.412931,
+            "v4": 224.84693
+          }
+        },
+        "colorshift": {
+          "outputs": {
+            "rust033": {
+              "length": 86071383,
+              "sha256": "143fb1731e47ca5aefe71f717ead221dddb97cbf550b2f259be7dbad931dee6d"
+            },
+            "v2": {
+              "length": 86071383,
+              "sha256": "143fb1731e47ca5aefe71f717ead221dddb97cbf550b2f259be7dbad931dee6d"
+            },
+            "v3": {
+              "length": 86071383,
+              "sha256": "143fb1731e47ca5aefe71f717ead221dddb97cbf550b2f259be7dbad931dee6d"
+            },
+            "v4": {
+              "length": 86071383,
+              "sha256": "143fb1731e47ca5aefe71f717ead221dddb97cbf550b2f259be7dbad931dee6d"
+            },
+            "python": {
+              "length": 86071383,
+              "sha256": "143fb1731e47ca5aefe71f717ead221dddb97cbf550b2f259be7dbad931dee6d",
+              "verification_seconds": 8.295958744995005
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              339.612072,
+              346.297683,
+              345.463014,
+              341.217838,
+              349.310393,
+              360.706443,
+              366.639277
+            ],
+            "v2": [
+              220.073077,
+              220.963037,
+              220.774594,
+              220.240698,
+              218.921853,
+              223.669424,
+              243.671006
+            ],
+            "v3": [
+              216.57816,
+              223.874317,
+              224.465993,
+              222.716554,
+              226.700636,
+              259.494356,
+              239.395511
+            ],
+            "v4": [
+              217.185126,
+              217.55304,
+              220.954835,
+              220.567641,
+              232.063684,
+              230.106953,
+              281.780423
+            ],
+            "python": [
+              5840.863846,
+              5807.194787,
+              5779.889838
+            ]
+          },
+          "median_ms": {
+            "python": 5807.194787,
+            "rust033": 346.297683,
+            "v2": 220.774594,
+            "v3": 224.465993,
+            "v4": 220.954835
+          }
+        },
+        "crumble": {
+          "outputs": {
+            "rust033": {
+              "length": 97704015,
+              "sha256": "724981f6e383779a27ce9c0c892de9cea4712b2111f2ea1ea9e23a2a252e5bc7"
+            },
+            "v2": {
+              "length": 97704015,
+              "sha256": "724981f6e383779a27ce9c0c892de9cea4712b2111f2ea1ea9e23a2a252e5bc7"
+            },
+            "v3": {
+              "length": 97704015,
+              "sha256": "724981f6e383779a27ce9c0c892de9cea4712b2111f2ea1ea9e23a2a252e5bc7"
+            },
+            "v4": {
+              "length": 97704015,
+              "sha256": "724981f6e383779a27ce9c0c892de9cea4712b2111f2ea1ea9e23a2a252e5bc7"
+            },
+            "python": {
+              "length": 105137639,
+              "sha256": "b0b5f142df2d728b9d58780ec041e7a255ebdb9dcc11fe3ae9f632dc42582c30",
+              "verification_seconds": 10.693957242001488
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              309.95649,
+              308.935879,
+              400.905947,
+              309.830417,
+              301.303275,
+              312.217521,
+              447.928275
+            ],
+            "v2": [
+              281.552438,
+              278.96359,
+              266.136293,
+              266.605277,
+              262.656505,
+              280.207141,
+              286.112063
+            ],
+            "v3": [
+              275.416843,
+              275.175079,
+              379.395429,
+              264.407733,
+              263.686136,
+              314.494135,
+              276.623303
+            ],
+            "v4": [
+              281.703349,
+              277.199931,
+              264.776028,
+              263.677455,
+              261.980507,
+              263.25991,
+              277.219888
+            ],
+            "python": [
+              7678.492801,
+              7708.961021,
+              7733.390404
+            ]
+          },
+          "median_ms": {
+            "python": 7708.961021,
+            "rust033": 309.95649,
+            "v2": 278.96359,
+            "v3": 275.416843,
+            "v4": 264.776028
+          }
+        },
+        "decrypt": {
+          "outputs": {
+            "rust033": {
+              "length": 500144389,
+              "sha256": "de5161fb1546e3103319408488ed1d7a4bb55757642ea054688eade4c607b26b"
+            },
+            "v2": {
+              "length": 500144389,
+              "sha256": "de5161fb1546e3103319408488ed1d7a4bb55757642ea054688eade4c607b26b"
+            },
+            "v3": {
+              "length": 500144389,
+              "sha256": "de5161fb1546e3103319408488ed1d7a4bb55757642ea054688eade4c607b26b"
+            },
+            "v4": {
+              "length": 500144389,
+              "sha256": "de5161fb1546e3103319408488ed1d7a4bb55757642ea054688eade4c607b26b"
+            },
+            "python": {
+              "length": 503138754,
+              "sha256": "c17224b9e95c4328ec1d4634bc38094bccee2489d17509fc3f8653a2b58ec3ee",
+              "verification_seconds": 11.671078725994448
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              483.004732,
+              492.202388,
+              486.243074,
+              488.314416,
+              482.019737,
+              496.836413,
+              504.644955
+            ],
+            "v2": [
+              313.323999,
+              315.690073,
+              310.620649,
+              312.64584,
+              312.506778,
+              310.608636,
+              336.762584
+            ],
+            "v3": [
+              318.703897,
+              326.391317,
+              327.466819,
+              318.176578,
+              316.788174,
+              332.125505,
+              336.916886
+            ],
+            "v4": [
+              318.881368,
+              319.164071,
+              313.56028,
+              312.158085,
+              305.412542,
+              316.55399,
+              330.964292
+            ],
+            "python": [
+              9690.897319,
+              9669.636589,
+              9591.280885
+            ]
+          },
+          "median_ms": {
+            "python": 9669.636589,
+            "rust033": 488.314416,
+            "v2": 312.64584,
+            "v3": 326.391317,
+            "v4": 316.55399
+          }
+        },
+        "errorcorrect": {
+          "outputs": {
+            "rust033": {
+              "length": 870187954,
+              "sha256": "7521b7051003b026320c0a9371bc34d6ec3dd138a294f517d2d7c6e15bbfd36e"
+            },
+            "v2": {
+              "length": 870187954,
+              "sha256": "7521b7051003b026320c0a9371bc34d6ec3dd138a294f517d2d7c6e15bbfd36e"
+            },
+            "v3": {
+              "length": 870187954,
+              "sha256": "7521b7051003b026320c0a9371bc34d6ec3dd138a294f517d2d7c6e15bbfd36e"
+            },
+            "v4": {
+              "length": 870187954,
+              "sha256": "7521b7051003b026320c0a9371bc34d6ec3dd138a294f517d2d7c6e15bbfd36e"
+            },
+            "python": {
+              "length": 863656598,
+              "sha256": "9a3a41bcd81bfcf19d0b4f84aad0bcd7e03c89a190e25bb07e1fa1b19707c7fb",
+              "verification_seconds": 10.043396982000559
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              339.226866,
+              339.454099,
+              324.410199,
+              338.70579,
+              322.448336,
+              328.766363,
+              325.883312
+            ],
+            "v2": [
+              229.264871,
+              227.683484,
+              221.412277,
+              236.637028,
+              223.194305,
+              222.76916,
+              221.900291
+            ],
+            "v3": [
+              241.680002,
+              238.761771,
+              244.516252,
+              242.232368,
+              238.7122,
+              255.433587,
+              257.522548
+            ],
+            "v4": [
+              224.083366,
+              223.54612,
+              221.350756,
+              237.76503,
+              219.986411,
+              221.220314,
+              228.214288
+            ],
+            "python": [
+              7946.202873,
+              7873.581994,
+              7870.616596
+            ]
+          },
+          "median_ms": {
+            "python": 7873.581994,
+            "rust033": 328.766363,
+            "v2": 223.194305,
+            "v3": 242.232368,
+            "v4": 223.54612
+          }
+        },
+        "expand": {
+          "outputs": {
+            "rust033": {
+              "length": 34777291,
+              "sha256": "63504d9cc800e6ec8fb905b77db1de1b2599187a757c069a713fe4455176f481"
+            },
+            "v2": {
+              "length": 34777291,
+              "sha256": "63504d9cc800e6ec8fb905b77db1de1b2599187a757c069a713fe4455176f481"
+            },
+            "v3": {
+              "length": 34777291,
+              "sha256": "63504d9cc800e6ec8fb905b77db1de1b2599187a757c069a713fe4455176f481"
+            },
+            "v4": {
+              "length": 34777291,
+              "sha256": "63504d9cc800e6ec8fb905b77db1de1b2599187a757c069a713fe4455176f481"
+            },
+            "python": {
+              "length": 34777291,
+              "sha256": "63504d9cc800e6ec8fb905b77db1de1b2599187a757c069a713fe4455176f481",
+              "verification_seconds": 4.953129021996574
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              113.539363,
+              112.231478,
+              113.855196,
+              114.348341,
+              114.520693,
+              113.041427,
+              115.25487
+            ],
+            "v2": [
+              90.000933,
+              90.472448,
+              92.080415,
+              95.445701,
+              92.625691,
+              93.154237,
+              92.57239
+            ],
+            "v3": [
+              91.855503,
+              91.964674,
+              91.814172,
+              92.080755,
+              91.397918,
+              92.187046,
+              93.262447
+            ],
+            "v4": [
+              91.399658,
+              91.793013,
+              92.911054,
+              92.052794,
+              91.711391,
+              92.779372,
+              92.365968
+            ],
+            "python": [
+              3509.711547,
+              3537.260788,
+              3513.254711
+            ]
+          },
+          "median_ms": {
+            "python": 3513.254711,
+            "rust033": 113.855196,
+            "v2": 92.57239,
+            "v3": 91.964674,
+            "v4": 92.052794
+          }
+        },
+        "fireworks": {
+          "outputs": {
+            "rust033": {
+              "length": 151760405,
+              "sha256": "3d62abb8de21b37c7decdfa45d4776bccd2dfb574fb1ec95b5646031d80dccf6"
+            },
+            "v2": {
+              "length": 151760405,
+              "sha256": "3d62abb8de21b37c7decdfa45d4776bccd2dfb574fb1ec95b5646031d80dccf6"
+            },
+            "v3": {
+              "length": 151760405,
+              "sha256": "3d62abb8de21b37c7decdfa45d4776bccd2dfb574fb1ec95b5646031d80dccf6"
+            },
+            "v4": {
+              "length": 151760405,
+              "sha256": "3d62abb8de21b37c7decdfa45d4776bccd2dfb574fb1ec95b5646031d80dccf6"
+            },
+            "python": {
+              "length": 141886000,
+              "sha256": "6c2dd13a6ab01380fbe770eaafabbd4b88d7bb2ef894196fac307a8d4ed5a667",
+              "verification_seconds": 22.873515078004857
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              373.460931,
+              346.004509,
+              357.467391,
+              343.622064,
+              336.77326,
+              334.744279,
+              332.136121
+            ],
+            "v2": [
+              342.429993,
+              315.931761,
+              333.463837,
+              306.611332,
+              311.652285,
+              306.689912,
+              303.857141
+            ],
+            "v3": [
+              407.845975,
+              317.092924,
+              343.591934,
+              313.354303,
+              312.983549,
+              306.959635,
+              304.225615
+            ],
+            "v4": [
+              365.935202,
+              345.373004,
+              314.064452,
+              314.766318,
+              315.525536,
+              309.132068,
+              311.009506
+            ],
+            "python": [
+              16124.638697,
+              16263.619338,
+              16413.706015
+            ]
+          },
+          "median_ms": {
+            "python": 16263.619338,
+            "rust033": 343.622064,
+            "v2": 311.652285,
+            "v3": 313.354303,
+            "v4": 314.766318
+          }
+        },
+        "highlight": {
+          "outputs": {
+            "rust033": {
+              "length": 21716273,
+              "sha256": "28ae0a41b9f2596d4562289b5d139bda13137f63e0b7f1f07d145669c0ef5468"
+            },
+            "v2": {
+              "length": 21716273,
+              "sha256": "28ae0a41b9f2596d4562289b5d139bda13137f63e0b7f1f07d145669c0ef5468"
+            },
+            "v3": {
+              "length": 21716273,
+              "sha256": "28ae0a41b9f2596d4562289b5d139bda13137f63e0b7f1f07d145669c0ef5468"
+            },
+            "v4": {
+              "length": 21716273,
+              "sha256": "28ae0a41b9f2596d4562289b5d139bda13137f63e0b7f1f07d145669c0ef5468"
+            },
+            "python": {
+              "length": 21716273,
+              "sha256": "28ae0a41b9f2596d4562289b5d139bda13137f63e0b7f1f07d145669c0ef5468",
+              "verification_seconds": 1.7999990149983205
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              50.11862,
+              49.482063,
+              50.353342,
+              51.066279,
+              49.881667,
+              51.422914,
+              49.617525
+            ],
+            "v2": [
+              36.557067,
+              36.796548,
+              37.445596,
+              38.176293,
+              36.768368,
+              36.742628,
+              36.641667
+            ],
+            "v3": [
+              36.964781,
+              38.057922,
+              36.971291,
+              38.148073,
+              37.076422,
+              38.909372,
+              38.577468
+            ],
+            "v4": [
+              36.955611,
+              38.030372,
+              38.960432,
+              36.876409,
+              37.275984,
+              38.378306,
+              36.756639
+            ],
+            "python": [
+              1359.946809,
+              1348.604261,
+              1370.142116
+            ]
+          },
+          "median_ms": {
+            "python": 1359.946809,
+            "rust033": 50.11862,
+            "v2": 36.768368,
+            "v3": 38.057922,
+            "v4": 37.275984
+          }
+        },
+        "laseretch": {
+          "outputs": {
+            "rust033": {
+              "length": 1291895693,
+              "sha256": "6334f6ca3bcb177474a48ef46754199ad32af8e3bc0c1914aa207cd7280cb489"
+            },
+            "v2": {
+              "length": 1291895693,
+              "sha256": "6334f6ca3bcb177474a48ef46754199ad32af8e3bc0c1914aa207cd7280cb489"
+            },
+            "v3": {
+              "length": 1291895693,
+              "sha256": "6334f6ca3bcb177474a48ef46754199ad32af8e3bc0c1914aa207cd7280cb489"
+            },
+            "v4": {
+              "length": 1291895693,
+              "sha256": "6334f6ca3bcb177474a48ef46754199ad32af8e3bc0c1914aa207cd7280cb489"
+            },
+            "python": {
+              "length": 1292948157,
+              "sha256": "c4188f73faca90c716d962106a3461e0ab407f5fb9a10823bc30091c0b510d41",
+              "verification_seconds": 24.365980784001295
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              613.996647,
+              616.812405,
+              617.482181,
+              614.77018,
+              620.77014,
+              670.061497,
+              637.134441
+            ],
+            "v2": [
+              597.330533,
+              599.619803,
+              593.133662,
+              597.969703,
+              601.7419,
+              604.742301,
+              620.007088
+            ],
+            "v3": [
+              595.895267,
+              596.710683,
+              598.520352,
+              603.856584,
+              613.923159,
+              620.193912,
+              631.006955
+            ],
+            "v4": [
+              592.561791,
+              581.844677,
+              599.139269,
+              596.449316,
+              594.874029,
+              595.767656,
+              621.389143
+            ],
+            "python": [
+              18327.775741,
+              18447.59968,
+              18438.048503
+            ]
+          },
+          "median_ms": {
+            "python": 18438.048503,
+            "rust033": 617.482181,
+            "v2": 599.619803,
+            "v3": 603.856584,
+            "v4": 595.767656
+          }
+        },
+        "matrix": {
+          "outputs": {
+            "rust033": {
+              "length": 309455444,
+              "sha256": "f1a6df8e2585ae2151eaf25842748b759e3d63e01902b56187163ba71f301bfe"
+            },
+            "v2": {
+              "length": 309455444,
+              "sha256": "f1a6df8e2585ae2151eaf25842748b759e3d63e01902b56187163ba71f301bfe"
+            },
+            "v3": {
+              "length": 309455444,
+              "sha256": "f1a6df8e2585ae2151eaf25842748b759e3d63e01902b56187163ba71f301bfe"
+            },
+            "v4": {
+              "length": 309455444,
+              "sha256": "f1a6df8e2585ae2151eaf25842748b759e3d63e01902b56187163ba71f301bfe"
+            },
+            "python": {
+              "length": 321569112,
+              "sha256": "937152acb0464ebb3be5dc5ed7931cad26fa5f9d55a9373ef15bb0506dd8e0f2",
+              "verification_seconds": 32.41382786700706
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              185.120059,
+              187.17489,
+              196.163754,
+              190.104021,
+              187.322971,
+              203.556421,
+              203.274499
+            ],
+            "v2": [
+              172.729338,
+              199.064884,
+              175.605027,
+              178.268285,
+              174.387275,
+              193.982231,
+              174.150592
+            ],
+            "v3": [
+              177.709111,
+              178.663631,
+              184.732204,
+              178.966383,
+              241.737514,
+              186.454561,
+              191.043589
+            ],
+            "v4": [
+              172.454294,
+              171.739217,
+              179.771202,
+              171.131891,
+              184.708833,
+              178.849872,
+              173.146021
+            ],
+            "python": [
+              24553.221699,
+              24580.00044,
+              24654.882321
+            ]
+          },
+          "median_ms": {
+            "python": 24580.00044,
+            "rust033": 190.104021,
+            "v2": 175.605027,
+            "v3": 184.732204,
+            "v4": 173.146021
+          }
+        },
+        "middleout": {
+          "outputs": {
+            "rust033": {
+              "length": 10475477,
+              "sha256": "0596d7822cc14c6c14dbbe43c82ddbdca4798a4a4d48afe3eac104dc7f40f1aa"
+            },
+            "v2": {
+              "length": 10475477,
+              "sha256": "0596d7822cc14c6c14dbbe43c82ddbdca4798a4a4d48afe3eac104dc7f40f1aa"
+            },
+            "v3": {
+              "length": 10475477,
+              "sha256": "0596d7822cc14c6c14dbbe43c82ddbdca4798a4a4d48afe3eac104dc7f40f1aa"
+            },
+            "v4": {
+              "length": 10475477,
+              "sha256": "0596d7822cc14c6c14dbbe43c82ddbdca4798a4a4d48afe3eac104dc7f40f1aa"
+            },
+            "python": {
+              "length": 10475477,
+              "sha256": "0596d7822cc14c6c14dbbe43c82ddbdca4798a4a4d48afe3eac104dc7f40f1aa",
+              "verification_seconds": 3.6978102730063256
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              92.430462,
+              112.117189,
+              89.548931,
+              93.159859,
+              90.182448,
+              97.254402,
+              89.691643
+            ],
+            "v2": [
+              64.186145,
+              64.838392,
+              66.052434,
+              72.156909,
+              71.981997,
+              67.053515,
+              68.764553
+            ],
+            "v3": [
+              65.830112,
+              66.59664,
+              66.139235,
+              66.373928,
+              69.087877,
+              90.459361,
+              64.972713
+            ],
+            "v4": [
+              65.145346,
+              72.673954,
+              64.801392,
+              65.939043,
+              70.036906,
+              68.892834,
+              67.51905
+            ],
+            "python": [
+              2505.383673,
+              2720.81168,
+              2379.612438
+            ]
+          },
+          "median_ms": {
+            "python": 2505.383673,
+            "rust033": 92.430462,
+            "v2": 67.053515,
+            "v3": 66.373928,
+            "v4": 67.51905
+          }
+        },
+        "orbittingvolley": {
+          "outputs": {
+            "rust033": {
+              "length": 112657456,
+              "sha256": "9baacb73820ed79290fafb74a8a8903e694479ef73df3dc92fe3903be4ea2df8"
+            },
+            "v2": {
+              "length": 112657456,
+              "sha256": "9baacb73820ed79290fafb74a8a8903e694479ef73df3dc92fe3903be4ea2df8"
+            },
+            "v3": {
+              "length": 112657456,
+              "sha256": "9baacb73820ed79290fafb74a8a8903e694479ef73df3dc92fe3903be4ea2df8"
+            },
+            "v4": {
+              "length": 112657456,
+              "sha256": "9baacb73820ed79290fafb74a8a8903e694479ef73df3dc92fe3903be4ea2df8"
+            },
+            "python": {
+              "length": 112657247,
+              "sha256": "955ee2a201fc653166f37876f704aba206785205712e63efc32ecc3a0ed32290",
+              "verification_seconds": 2.519276176994026
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              75.15353,
+              75.402143,
+              75.260701,
+              74.423172,
+              74.24838,
+              72.009016,
+              73.521052
+            ],
+            "v2": [
+              86.047185,
+              87.046095,
+              89.599062,
+              87.154826,
+              87.098456,
+              85.291986,
+              86.194846
+            ],
+            "v3": [
+              85.022913,
+              88.710672,
+              85.68655,
+              91.37653,
+              86.704281,
+              86.59521,
+              85.750732
+            ],
+            "v4": [
+              88.498261,
+              86.265347,
+              90.040657,
+              86.826183,
+              87.833143,
+              86.036034,
+              86.121515
+            ],
+            "python": [
+              2056.562677,
+              2098.190555,
+              2142.375805
+            ]
+          },
+          "median_ms": {
+            "python": 2098.190555,
+            "rust033": 74.423172,
+            "v2": 87.046095,
+            "v3": 86.59521,
+            "v4": 86.826183
+          }
+        },
+        "overflow": {
+          "outputs": {
+            "rust033": {
+              "length": 53769911,
+              "sha256": "b3ee544327628047801418c50e7f1e39275f582a58cd4b5cec1ced7c0c2c9769"
+            },
+            "v2": {
+              "length": 53769911,
+              "sha256": "b3ee544327628047801418c50e7f1e39275f582a58cd4b5cec1ced7c0c2c9769"
+            },
+            "v3": {
+              "length": 53769911,
+              "sha256": "b3ee544327628047801418c50e7f1e39275f582a58cd4b5cec1ced7c0c2c9769"
+            },
+            "v4": {
+              "length": 53769911,
+              "sha256": "b3ee544327628047801418c50e7f1e39275f582a58cd4b5cec1ced7c0c2c9769"
+            },
+            "python": {
+              "length": 28243209,
+              "sha256": "ae8ea7debc639ae2c08dd759f64df2254ad120a31c91ab06aeadfe7c2bfd779e",
+              "verification_seconds": 2.4822915089971502
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              115.067349,
+              122.917911,
+              115.17348,
+              117.091081,
+              114.072128,
+              113.807655,
+              121.380395
+            ],
+            "v2": [
+              92.248309,
+              91.424191,
+              90.047656,
+              92.621623,
+              90.844395,
+              90.758484,
+              90.824464
+            ],
+            "v3": [
+              92.399981,
+              92.905736,
+              92.107238,
+              93.029527,
+              91.936475,
+              92.015086,
+              91.959316
+            ],
+            "v4": [
+              91.201349,
+              97.708567,
+              91.844764,
+              90.997606,
+              91.074137,
+              90.873995,
+              91.292549
+            ],
+            "python": [
+              2072.46236,
+              2046.517984,
+              2032.855005
+            ]
+          },
+          "median_ms": {
+            "python": 2046.517984,
+            "rust033": 115.17348,
+            "v2": 90.844395,
+            "v3": 92.107238,
+            "v4": 91.201349
+          }
+        },
+        "pour": {
+          "outputs": {
+            "rust033": {
+              "length": 633629421,
+              "sha256": "cd19d4788799ed4b5690b31c24598c4608d547288917253c70e2be5c543450d3"
+            },
+            "v2": {
+              "length": 633629421,
+              "sha256": "cd19d4788799ed4b5690b31c24598c4608d547288917253c70e2be5c543450d3"
+            },
+            "v3": {
+              "length": 633629421,
+              "sha256": "cd19d4788799ed4b5690b31c24598c4608d547288917253c70e2be5c543450d3"
+            },
+            "v4": {
+              "length": 633629421,
+              "sha256": "cd19d4788799ed4b5690b31c24598c4608d547288917253c70e2be5c543450d3"
+            },
+            "python": {
+              "length": 633636220,
+              "sha256": "28a746011592af1a688165e9bf4a53b5685ec89828e801299c589d2ecfad8cd4",
+              "verification_seconds": 9.030850165996526
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              279.650476,
+              280.716007,
+              282.396924,
+              279.483773,
+              284.292593,
+              283.990809,
+              281.852496
+            ],
+            "v2": [
+              245.369076,
+              246.513718,
+              245.998561,
+              256.065408,
+              247.441647,
+              247.344995,
+              245.605207
+            ],
+            "v3": [
+              251.260228,
+              252.272178,
+              251.200237,
+              252.196546,
+              257.419541,
+              255.132926,
+              252.973193
+            ],
+            "v4": [
+              244.977752,
+              244.491887,
+              244.038511,
+              245.654058,
+              247.268674,
+              247.317935,
+              246.536786
+            ],
+            "python": [
+              7207.226817,
+              7186.094476,
+              7071.071774
+            ]
+          },
+          "median_ms": {
+            "python": 7186.094476,
+            "rust033": 281.852496,
+            "v2": 246.513718,
+            "v3": 252.272178,
+            "v4": 245.654058
+          }
+        },
+        "print": {
+          "outputs": {
+            "rust033": {
+              "length": 1099571303,
+              "sha256": "6c814c80f9dc98c941d397e64b4912c05dbf770afc0fee7555b0c190f1e73d42"
+            },
+            "v2": {
+              "length": 1099571303,
+              "sha256": "6c814c80f9dc98c941d397e64b4912c05dbf770afc0fee7555b0c190f1e73d42"
+            },
+            "v3": {
+              "length": 1099571303,
+              "sha256": "6c814c80f9dc98c941d397e64b4912c05dbf770afc0fee7555b0c190f1e73d42"
+            },
+            "v4": {
+              "length": 1099571303,
+              "sha256": "6c814c80f9dc98c941d397e64b4912c05dbf770afc0fee7555b0c190f1e73d42"
+            },
+            "python": {
+              "length": 1099571303,
+              "sha256": "6c814c80f9dc98c941d397e64b4912c05dbf770afc0fee7555b0c190f1e73d42",
+              "verification_seconds": 11.394221649003157
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              359.567948,
+              357.041062,
+              371.21346,
+              370.735895,
+              360.407606,
+              354.718345,
+              353.526213
+            ],
+            "v2": [
+              232.414917,
+              234.314886,
+              235.345696,
+              233.846891,
+              233.805779,
+              233.372655,
+              234.491546
+            ],
+            "v3": [
+              247.06145,
+              246.879097,
+              246.597664,
+              246.272321,
+              245.148928,
+              254.276063,
+              246.351181
+            ],
+            "v4": [
+              230.026261,
+              230.776159,
+              233.696469,
+              230.669297,
+              230.0558,
+              229.570664,
+              229.750227
+            ],
+            "python": [
+              8846.373853,
+              8873.898824,
+              9157.702111
+            ]
+          },
+          "median_ms": {
+            "python": 8873.898824,
+            "rust033": 359.567948,
+            "v2": 233.846891,
+            "v3": 246.597664,
+            "v4": 230.0558
+          }
+        },
+        "rain": {
+          "outputs": {
+            "rust033": {
+              "length": 434514903,
+              "sha256": "1439c54c6a29bd27e8abcedf006a9d713197552e449cf8a90027a1615ca092b0"
+            },
+            "v2": {
+              "length": 434514903,
+              "sha256": "1439c54c6a29bd27e8abcedf006a9d713197552e449cf8a90027a1615ca092b0"
+            },
+            "v3": {
+              "length": 434514903,
+              "sha256": "1439c54c6a29bd27e8abcedf006a9d713197552e449cf8a90027a1615ca092b0"
+            },
+            "v4": {
+              "length": 434514903,
+              "sha256": "1439c54c6a29bd27e8abcedf006a9d713197552e449cf8a90027a1615ca092b0"
+            },
+            "python": {
+              "length": 435120752,
+              "sha256": "548a7ebb588808ebd6b87a8304eeee3c5e7cf07ccd1101f4d49819a101713c42",
+              "verification_seconds": 6.878751536998607
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              224.547291,
+              223.434119,
+              226.031475,
+              227.214248,
+              221.864701,
+              220.250025,
+              222.421527
+            ],
+            "v2": [
+              208.031528,
+              207.062388,
+              214.639197,
+              212.10224,
+              204.979415,
+              207.277979,
+              203.839262
+            ],
+            "v3": [
+              214.089211,
+              211.14836,
+              207.420271,
+              211.465133,
+              206.705593,
+              206.096557,
+              205.693192
+            ],
+            "v4": [
+              213.529275,
+              209.1361,
+              216.220963,
+              207.112497,
+              204.902974,
+              204.183696,
+              205.995495
+            ],
+            "python": [
+              5514.062068,
+              5458.888948,
+              5406.868564
+            ]
+          },
+          "median_ms": {
+            "python": 5458.888948,
+            "rust033": 223.434119,
+            "v2": 207.277979,
+            "v3": 207.420271,
+            "v4": 207.112497
+          }
+        },
+        "randomsequence": {
+          "outputs": {
+            "rust033": {
+              "length": 22759750,
+              "sha256": "5a4181bcf49f5cf60dbe51c4126dec37c26f69d320750bba97ac5b19cc26c70e"
+            },
+            "v2": {
+              "length": 22759750,
+              "sha256": "5a4181bcf49f5cf60dbe51c4126dec37c26f69d320750bba97ac5b19cc26c70e"
+            },
+            "v3": {
+              "length": 22759750,
+              "sha256": "5a4181bcf49f5cf60dbe51c4126dec37c26f69d320750bba97ac5b19cc26c70e"
+            },
+            "v4": {
+              "length": 22759750,
+              "sha256": "5a4181bcf49f5cf60dbe51c4126dec37c26f69d320750bba97ac5b19cc26c70e"
+            },
+            "python": {
+              "length": 22759759,
+              "sha256": "6be7736bafe166298b3932965ff46808218b1ce5d47d79df58ac684f22b62d49",
+              "verification_seconds": 1.4457771300003515
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              52.5562,
+              53.370848,
+              53.53805,
+              53.659041,
+              51.931543,
+              56.3756,
+              54.120236
+            ],
+            "v2": [
+              34.003876,
+              34.116567,
+              33.760344,
+              34.635962,
+              33.639192,
+              33.798203,
+              33.824733
+            ],
+            "v3": [
+              34.095617,
+              34.489661,
+              34.349039,
+              33.922835,
+              33.820044,
+              34.816694,
+              34.965126
+            ],
+            "v4": [
+              33.899905,
+              34.177287,
+              34.208678,
+              34.020156,
+              33.732573,
+              34.074396,
+              33.864294
+            ],
+            "python": [
+              1124.777347,
+              1158.507747,
+              1122.101351
+            ]
+          },
+          "median_ms": {
+            "python": 1124.777347,
+            "rust033": 53.53805,
+            "v2": 33.824733,
+            "v3": 34.349039,
+            "v4": 34.020156
+          }
+        },
+        "rings": {
+          "outputs": {
+            "rust033": {
+              "length": 102088065,
+              "sha256": "33659497ade640de4554b001a8c4fa911b704a9b6d424a5cbd2e86f726255376"
+            },
+            "v2": {
+              "length": 102088065,
+              "sha256": "33659497ade640de4554b001a8c4fa911b704a9b6d424a5cbd2e86f726255376"
+            },
+            "v3": {
+              "length": 102088065,
+              "sha256": "33659497ade640de4554b001a8c4fa911b704a9b6d424a5cbd2e86f726255376"
+            },
+            "v4": {
+              "length": 102088065,
+              "sha256": "33659497ade640de4554b001a8c4fa911b704a9b6d424a5cbd2e86f726255376"
+            },
+            "python": {
+              "length": 100883967,
+              "sha256": "fe606409d14b137c20a77b491ea385e0b32fe556e54d64abbb703f106ade2fd4",
+              "verification_seconds": 19.045932664994325
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              639.971465,
+              636.500989,
+              621.143327,
+              622.970914,
+              968.255944,
+              651.485037,
+              637.255407
+            ],
+            "v2": [
+              653.250637,
+              644.695994,
+              645.727383,
+              637.613387,
+              1364.750863,
+              698.975583,
+              649.14539
+            ],
+            "v3": [
+              656.007135,
+              643.535962,
+              649.155679,
+              649.363949,
+              720.44833,
+              731.989676,
+              655.696679
+            ],
+            "v4": [
+              639.594133,
+              656.51688,
+              637.527977,
+              636.137841,
+              634.761265,
+              757.590205,
+              639.606691
+            ],
+            "python": [
+              12917.093149,
+              12199.155674,
+              12290.513773
+            ]
+          },
+          "median_ms": {
+            "python": 12290.513773,
+            "rust033": 637.255407,
+            "v2": 649.14539,
+            "v3": 655.696679,
+            "v4": 639.594133
+          }
+        },
+        "scattered": {
+          "outputs": {
+            "rust033": {
+              "length": 63224463,
+              "sha256": "aed102b64e15e92ce6f0a0cfa3713cf87743c50cf12548f5101af139963f405c"
+            },
+            "v2": {
+              "length": 63224463,
+              "sha256": "aed102b64e15e92ce6f0a0cfa3713cf87743c50cf12548f5101af139963f405c"
+            },
+            "v3": {
+              "length": 63224463,
+              "sha256": "aed102b64e15e92ce6f0a0cfa3713cf87743c50cf12548f5101af139963f405c"
+            },
+            "v4": {
+              "length": 63224463,
+              "sha256": "aed102b64e15e92ce6f0a0cfa3713cf87743c50cf12548f5101af139963f405c"
+            },
+            "python": {
+              "length": 64655897,
+              "sha256": "bece31bec20dff9294bb744c40fc8a991f5e10f275887aa7993977ec6b0afa16",
+              "verification_seconds": 6.315196225004911
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              132.134498,
+              132.478851,
+              132.012837,
+              132.268839,
+              131.570701,
+              132.858035,
+              131.38383
+            ],
+            "v2": [
+              105.51519,
+              105.689802,
+              105.986175,
+              106.107956,
+              107.686703,
+              107.4594,
+              106.562001
+            ],
+            "v3": [
+              106.021936,
+              106.693662,
+              106.880845,
+              106.47692,
+              108.253279,
+              107.780383,
+              106.160926
+            ],
+            "v4": [
+              107.029535,
+              108.799174,
+              107.108677,
+              106.733393,
+              106.677902,
+              106.589861,
+              106.934965
+            ],
+            "python": [
+              3968.254076,
+              3992.247954,
+              3981.450942
+            ]
+          },
+          "median_ms": {
+            "python": 3981.450942,
+            "rust033": 132.134498,
+            "v2": 106.107956,
+            "v3": 106.693662,
+            "v4": 106.934965
+          }
+        },
+        "slice": {
+          "outputs": {
+            "rust033": {
+              "length": 45715079,
+              "sha256": "00487b0234525e1ce2e1d94d3d7b727f518885c3623b5c8a4e2e2a7c442d4134"
+            },
+            "v2": {
+              "length": 45715079,
+              "sha256": "00487b0234525e1ce2e1d94d3d7b727f518885c3623b5c8a4e2e2a7c442d4134"
+            },
+            "v3": {
+              "length": 45715079,
+              "sha256": "00487b0234525e1ce2e1d94d3d7b727f518885c3623b5c8a4e2e2a7c442d4134"
+            },
+            "v4": {
+              "length": 45715079,
+              "sha256": "00487b0234525e1ce2e1d94d3d7b727f518885c3623b5c8a4e2e2a7c442d4134"
+            },
+            "python": {
+              "length": 45715079,
+              "sha256": "00487b0234525e1ce2e1d94d3d7b727f518885c3623b5c8a4e2e2a7c442d4134",
+              "verification_seconds": 4.392948189997696
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              65.622034,
+              65.503343,
+              65.190049,
+              65.028888,
+              65.011627,
+              64.754655,
+              64.509112
+            ],
+            "v2": [
+              54.798402,
+              55.261846,
+              55.002693,
+              55.061284,
+              55.353257,
+              55.075374,
+              55.329266
+            ],
+            "v3": [
+              56.526929,
+              56.860742,
+              56.754991,
+              56.435208,
+              56.669881,
+              56.841552,
+              57.683941
+            ],
+            "v4": [
+              56.242966,
+              55.71754,
+              56.071485,
+              55.65698,
+              55.831702,
+              55.917623,
+              55.769481
+            ],
+            "python": [
+              2737.583892,
+              2731.421044,
+              2700.268937
+            ]
+          },
+          "median_ms": {
+            "python": 2731.421044,
+            "rust033": 65.028888,
+            "v2": 55.075374,
+            "v3": 56.754991,
+            "v4": 55.831702
+          }
+        },
+        "slide": {
+          "outputs": {
+            "rust033": {
+              "length": 33858510,
+              "sha256": "a559f6cacb649d1606f8dc7556b4cc7feade9b7b09999dd937c93a4d5de2de4c"
+            },
+            "v2": {
+              "length": 33858510,
+              "sha256": "a559f6cacb649d1606f8dc7556b4cc7feade9b7b09999dd937c93a4d5de2de4c"
+            },
+            "v3": {
+              "length": 33858510,
+              "sha256": "a559f6cacb649d1606f8dc7556b4cc7feade9b7b09999dd937c93a4d5de2de4c"
+            },
+            "v4": {
+              "length": 33858510,
+              "sha256": "a559f6cacb649d1606f8dc7556b4cc7feade9b7b09999dd937c93a4d5de2de4c"
+            },
+            "python": {
+              "length": 33858538,
+              "sha256": "0305dfc24dd95298e35fc3e5feae89a2f5fd627496e9945109f5d832bc5c9dee",
+              "verification_seconds": 4.034275441998034
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              95.890169,
+              98.105712,
+              100.678059,
+              96.790728,
+              109.128577,
+              98.238113,
+              101.587418
+            ],
+            "v2": [
+              58.955634,
+              59.53859,
+              59.971865,
+              59.663211,
+              61.968506,
+              60.214247,
+              60.875054
+            ],
+            "v3": [
+              59.603031,
+              60.964906,
+              61.35427,
+              61.286088,
+              61.223538,
+              62.746714,
+              63.439091
+            ],
+            "v4": [
+              59.102426,
+              60.881474,
+              60.774713,
+              59.963485,
+              61.42778,
+              62.340599,
+              63.968166
+            ],
+            "python": [
+              2524.099244,
+              2577.094307,
+              2557.259419
+            ]
+          },
+          "median_ms": {
+            "python": 2557.259419,
+            "rust033": 98.238113,
+            "v2": 59.971865,
+            "v3": 61.286088,
+            "v4": 60.881474
+          }
+        },
+        "smoke": {
+          "outputs": {
+            "rust033": {
+              "length": 153369493,
+              "sha256": "aef1989d237985eb6671f86a3201fab50744d75cb5ce0fe52bb8d74e48f35d02"
+            },
+            "v2": {
+              "length": 153369493,
+              "sha256": "aef1989d237985eb6671f86a3201fab50744d75cb5ce0fe52bb8d74e48f35d02"
+            },
+            "v3": {
+              "length": 153369493,
+              "sha256": "aef1989d237985eb6671f86a3201fab50744d75cb5ce0fe52bb8d74e48f35d02"
+            },
+            "v4": {
+              "length": 153369493,
+              "sha256": "aef1989d237985eb6671f86a3201fab50744d75cb5ce0fe52bb8d74e48f35d02"
+            },
+            "python": {
+              "length": 98933482,
+              "sha256": "9ef6cc96c4ca6bf29f746cb248e0e8e3a5f4cbdf94a6173e66cb5de79d94841a",
+              "verification_seconds": 5.513261863001389
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              219.735018,
+              210.666904,
+              219.772768,
+              229.839134,
+              207.755643,
+              206.704462,
+              203.762871
+            ],
+            "v2": [
+              172.273464,
+              149.336285,
+              157.185427,
+              145.637797,
+              141.919577,
+              145.471075,
+              143.321092
+            ],
+            "v3": [
+              152.826951,
+              156.186516,
+              171.528606,
+              149.299814,
+              145.610656,
+              140.912547,
+              133.382919
+            ],
+            "v4": [
+              155.425238,
+              160.291579,
+              161.935176,
+              148.215703,
+              154.489409,
+              140.839886,
+              146.100631
+            ],
+            "python": [
+              3478.731445,
+              3506.68422,
+              3493.557466
+            ]
+          },
+          "median_ms": {
+            "python": 3493.557466,
+            "rust033": 210.666904,
+            "v2": 145.637797,
+            "v3": 149.299814,
+            "v4": 154.489409
+          }
+        },
+        "spotlights": {
+          "outputs": {
+            "rust033": {
+              "length": 128717099,
+              "sha256": "8847d23b65a3c8eca337a8d9dba3428dfd95ad325c02fb9ce5fe36fff7ff93c1"
+            },
+            "v2": {
+              "length": 128717099,
+              "sha256": "8847d23b65a3c8eca337a8d9dba3428dfd95ad325c02fb9ce5fe36fff7ff93c1"
+            },
+            "v3": {
+              "length": 128717099,
+              "sha256": "8847d23b65a3c8eca337a8d9dba3428dfd95ad325c02fb9ce5fe36fff7ff93c1"
+            },
+            "v4": {
+              "length": 128717099,
+              "sha256": "8847d23b65a3c8eca337a8d9dba3428dfd95ad325c02fb9ce5fe36fff7ff93c1"
+            },
+            "python": {
+              "length": 131199455,
+              "sha256": "2e165300fba5045d79ead9bfee7a2e87612859a36c76c9bcd4c3d226fcd794f8",
+              "verification_seconds": 15.420859035999456
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              301.8878,
+              303.005202,
+              292.944017,
+              321.833288,
+              291.615072,
+              300.778638,
+              291.433751
+            ],
+            "v2": [
+              263.914866,
+              225.395335,
+              227.672968,
+              229.241974,
+              247.581354,
+              226.735978,
+              248.386732
+            ],
+            "v3": [
+              228.246724,
+              269.446843,
+              231.359217,
+              255.843841,
+              265.345609,
+              231.725809,
+              258.576599
+            ],
+            "v4": [
+              310.259798,
+              245.685336,
+              230.123223,
+              231.73698,
+              260.654101,
+              229.899061,
+              235.090354
+            ],
+            "python": [
+              10727.017459,
+              10682.953471,
+              10756.192627
+            ]
+          },
+          "median_ms": {
+            "python": 10727.017459,
+            "rust033": 300.778638,
+            "v2": 229.241974,
+            "v3": 255.843841,
+            "v4": 235.090354
+          }
+        },
+        "spray": {
+          "outputs": {
+            "rust033": {
+              "length": 79771848,
+              "sha256": "aa427c9ecd91d3f8057b6df64d90fa75f69d3cc2499b3d65465926396ad8756c"
+            },
+            "v2": {
+              "length": 79771848,
+              "sha256": "aa427c9ecd91d3f8057b6df64d90fa75f69d3cc2499b3d65465926396ad8756c"
+            },
+            "v3": {
+              "length": 79771848,
+              "sha256": "aa427c9ecd91d3f8057b6df64d90fa75f69d3cc2499b3d65465926396ad8756c"
+            },
+            "v4": {
+              "length": 79771848,
+              "sha256": "aa427c9ecd91d3f8057b6df64d90fa75f69d3cc2499b3d65465926396ad8756c"
+            },
+            "python": {
+              "length": 82877248,
+              "sha256": "3e0730f6f93711f79037ccc7cdeac8a81ec28d09b86f3fc5a7b0e84dfd83bcdd",
+              "verification_seconds": 5.188861499998893
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              154.357744,
+              154.555676,
+              148.416122,
+              144.876775,
+              152.0563,
+              141.256478,
+              147.014628
+            ],
+            "v2": [
+              158.619678,
+              156.254654,
+              146.028618,
+              160.037913,
+              151.203311,
+              146.495992,
+              163.971004
+            ],
+            "v3": [
+              175.411954,
+              157.170653,
+              152.742767,
+              143.655923,
+              148.456702,
+              146.838346,
+              160.309436
+            ],
+            "v4": [
+              160.963193,
+              146.031888,
+              149.865548,
+              150.153411,
+              139.773072,
+              143.481731,
+              161.199285
+            ],
+            "python": [
+              3182.078856,
+              3167.797902,
+              3187.055504
+            ]
+          },
+          "median_ms": {
+            "python": 3182.078856,
+            "rust033": 148.416122,
+            "v2": 156.254654,
+            "v3": 152.742767,
+            "v4": 149.865548
+          }
+        },
+        "swarm": {
+          "outputs": {
+            "rust033": {
+              "length": 497447270,
+              "sha256": "71a46c28aaca2254662fae01ea4045d7e9a27ff56199845e574ba29829dd10c0"
+            },
+            "v2": {
+              "length": 497447270,
+              "sha256": "71a46c28aaca2254662fae01ea4045d7e9a27ff56199845e574ba29829dd10c0"
+            },
+            "v3": {
+              "length": 497447270,
+              "sha256": "71a46c28aaca2254662fae01ea4045d7e9a27ff56199845e574ba29829dd10c0"
+            },
+            "v4": {
+              "length": 497447270,
+              "sha256": "71a46c28aaca2254662fae01ea4045d7e9a27ff56199845e574ba29829dd10c0"
+            },
+            "python": {
+              "length": 525853705,
+              "sha256": "dbd4c08a9140bc704ab767759e65d7d211c4676f32ddca9cb706502af5541f5e",
+              "verification_seconds": 27.106485405995045
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              766.009629,
+              763.701973,
+              782.119352,
+              735.482206,
+              786.412541,
+              795.312941,
+              789.273567
+            ],
+            "v2": [
+              719.411106,
+              744.25414,
+              758.085892,
+              766.139804,
+              799.762141,
+              823.339382,
+              891.217351
+            ],
+            "v3": [
+              825.81796,
+              746.495104,
+              759.964872,
+              794.228044,
+              749.786192,
+              781.458686,
+              801.890787
+            ],
+            "v4": [
+              748.631489,
+              812.103916,
+              779.831617,
+              780.760965,
+              766.077041,
+              821.352602,
+              784.915631
+            ],
+            "python": [
+              16885.914286,
+              16936.893691,
+              16917.873938
+            ]
+          },
+          "median_ms": {
+            "python": 16917.873938,
+            "rust033": 782.119352,
+            "v2": 766.139804,
+            "v3": 781.458686,
+            "v4": 780.760965
+          }
+        },
+        "sweep": {
+          "outputs": {
+            "rust033": {
+              "length": 40581071,
+              "sha256": "6c5025ae9b172c5ca8ae33164afe6dc388de7a1761e5bbe9f5288f134117edbe"
+            },
+            "v2": {
+              "length": 40581071,
+              "sha256": "6c5025ae9b172c5ca8ae33164afe6dc388de7a1761e5bbe9f5288f134117edbe"
+            },
+            "v3": {
+              "length": 40581071,
+              "sha256": "6c5025ae9b172c5ca8ae33164afe6dc388de7a1761e5bbe9f5288f134117edbe"
+            },
+            "v4": {
+              "length": 40581071,
+              "sha256": "6c5025ae9b172c5ca8ae33164afe6dc388de7a1761e5bbe9f5288f134117edbe"
+            },
+            "python": {
+              "length": 40580628,
+              "sha256": "1be1a1d66d818aa88b07783950c3dd1ec5887c3031394e264add04bb29072534",
+              "verification_seconds": 2.2656179390032776
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              81.354593,
+              80.072599,
+              96.350628,
+              96.319288,
+              76.614093,
+              83.0353,
+              76.599063
+            ],
+            "v2": [
+              56.653177,
+              54.98801,
+              58.89186,
+              52.555004,
+              53.312772,
+              51.308181,
+              72.850135
+            ],
+            "v3": [
+              51.793076,
+              52.354182,
+              53.709396,
+              56.245302,
+              53.330232,
+              57.497875,
+              57.458915
+            ],
+            "v4": [
+              50.402152,
+              63.596089,
+              64.73357,
+              53.467813,
+              67.735961,
+              49.25799,
+              72.103457
+            ],
+            "python": [
+              1569.066459,
+              1553.631543,
+              1548.297533
+            ]
+          },
+          "median_ms": {
+            "python": 1553.631543,
+            "rust033": 81.354593,
+            "v2": 54.98801,
+            "v3": 53.709396,
+            "v4": 63.596089
+          }
+        },
+        "synthgrid": {
+          "outputs": {
+            "rust033": {
+              "length": 79651666,
+              "sha256": "13eef9a97e22de0574dd6d0788308f998bcc6521e345b9d89a480ce128c6f744"
+            },
+            "v2": {
+              "length": 79651666,
+              "sha256": "13eef9a97e22de0574dd6d0788308f998bcc6521e345b9d89a480ce128c6f744"
+            },
+            "v3": {
+              "length": 79651666,
+              "sha256": "13eef9a97e22de0574dd6d0788308f998bcc6521e345b9d89a480ce128c6f744"
+            },
+            "v4": {
+              "length": 79651666,
+              "sha256": "13eef9a97e22de0574dd6d0788308f998bcc6521e345b9d89a480ce128c6f744"
+            },
+            "python": {
+              "length": 83669895,
+              "sha256": "889e6e9e93d378e01c71d7becd179a2b87faa60a514aa5b1b4f71b89880c54df",
+              "verification_seconds": 3.3051552920005633
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              141.165152,
+              148.168924,
+              153.079035,
+              149.425437,
+              146.908971,
+              147.400716,
+              143.796149
+            ],
+            "v2": [
+              86.211613,
+              87.128422,
+              90.893621,
+              78.538923,
+              100.022606,
+              82.798977,
+              84.06183
+            ],
+            "v3": [
+              85.137761,
+              87.786039,
+              87.318704,
+              98.397659,
+              91.718349,
+              88.89739,
+              86.776268
+            ],
+            "v4": [
+              78.959357,
+              86.93569,
+              91.78863,
+              92.75853,
+              83.299943,
+              84.02127,
+              86.518805
+            ],
+            "python": [
+              2511.526436,
+              2516.375532,
+              2523.440889
+            ]
+          },
+          "median_ms": {
+            "python": 2516.375532,
+            "rust033": 147.400716,
+            "v2": 86.211613,
+            "v3": 87.786039,
+            "v4": 86.518805
+          }
+        },
+        "thunderstorm": {
+          "outputs": {
+            "rust033": {
+              "length": 177304441,
+              "sha256": "6001601d8e8b987f156035c2a651a8112df5519f1cbe5ada793eaf3af6b0d801"
+            },
+            "v2": {
+              "length": 177304441,
+              "sha256": "6001601d8e8b987f156035c2a651a8112df5519f1cbe5ada793eaf3af6b0d801"
+            },
+            "v3": {
+              "length": 177304441,
+              "sha256": "6001601d8e8b987f156035c2a651a8112df5519f1cbe5ada793eaf3af6b0d801"
+            },
+            "v4": {
+              "length": 177304441,
+              "sha256": "6001601d8e8b987f156035c2a651a8112df5519f1cbe5ada793eaf3af6b0d801"
+            },
+            "python": {
+              "length": 166088581,
+              "sha256": "30216870d66a2d46d045998ffb97f16d938b3deed5b7d6f08e5c8f3601e88514",
+              "verification_seconds": 8.000773829997343
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              310.727246,
+              316.375973,
+              345.243132,
+              318.315173,
+              318.642776,
+              312.986747,
+              313.421951
+            ],
+            "v2": [
+              194.393201,
+              199.473694,
+              190.825294,
+              198.684165,
+              196.919187,
+              190.076596,
+              189.52372
+            ],
+            "v3": [
+              199.141361,
+              194.152459,
+              210.370476,
+              208.610038,
+              196.475023,
+              195.433731,
+              195.719994
+            ],
+            "v4": [
+              211.759801,
+              216.364749,
+              227.514284,
+              192.815895,
+              194.737494,
+              186.726272,
+              193.39877
+            ],
+            "python": [
+              4991.544762,
+              5004.603736,
+              4952.45514
+            ]
+          },
+          "median_ms": {
+            "python": 4991.544762,
+            "rust033": 316.375973,
+            "v2": 194.393201,
+            "v3": 196.475023,
+            "v4": 194.737494
+          }
+        },
+        "unstable": {
+          "outputs": {
+            "rust033": {
+              "length": 60360223,
+              "sha256": "bec9e3b3fecfbb9b8adf3ad2e62e840282231f1bd0661cff45b52693aa722975"
+            },
+            "v2": {
+              "length": 60360223,
+              "sha256": "bec9e3b3fecfbb9b8adf3ad2e62e840282231f1bd0661cff45b52693aa722975"
+            },
+            "v3": {
+              "length": 60360223,
+              "sha256": "bec9e3b3fecfbb9b8adf3ad2e62e840282231f1bd0661cff45b52693aa722975"
+            },
+            "v4": {
+              "length": 60360223,
+              "sha256": "bec9e3b3fecfbb9b8adf3ad2e62e840282231f1bd0661cff45b52693aa722975"
+            },
+            "python": {
+              "length": 60459704,
+              "sha256": "81a93733e8122765baf38e02902cd7d957d614b2e43d847be1a3cc88c1622e84",
+              "verification_seconds": 8.04296229800093
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              217.550659,
+              186.003793,
+              189.65168,
+              189.884403,
+              187.521528,
+              188.040913,
+              186.561938
+            ],
+            "v2": [
+              169.2391,
+              149.286943,
+              150.278764,
+              151.382344,
+              147.885459,
+              148.200992,
+              145.083149
+            ],
+            "v3": [
+              179.064012,
+              154.361626,
+              152.111993,
+              149.059841,
+              149.771058,
+              162.48178,
+              170.495362
+            ],
+            "v4": [
+              166.912126,
+              159.222706,
+              149.96693,
+              148.674507,
+              146.274232,
+              147.179912,
+              146.344193
+            ],
+            "python": [
+              4878.905332,
+              4873.893094,
+              4879.453037
+            ]
+          },
+          "median_ms": {
+            "python": 4878.905332,
+            "rust033": 188.040913,
+            "v2": 149.286943,
+            "v3": 154.361626,
+            "v4": 148.674507
+          }
+        },
+        "vhstape": {
+          "outputs": {
+            "rust033": {
+              "length": 124455679,
+              "sha256": "1ccff8a84ab6141c85c7e591f3d7766ff1d7072edcfddc5b1110b052944e1951"
+            },
+            "v2": {
+              "length": 124455679,
+              "sha256": "1ccff8a84ab6141c85c7e591f3d7766ff1d7072edcfddc5b1110b052944e1951"
+            },
+            "v3": {
+              "length": 124455679,
+              "sha256": "1ccff8a84ab6141c85c7e591f3d7766ff1d7072edcfddc5b1110b052944e1951"
+            },
+            "v4": {
+              "length": 124455679,
+              "sha256": "1ccff8a84ab6141c85c7e591f3d7766ff1d7072edcfddc5b1110b052944e1951"
+            },
+            "python": {
+              "length": 123344116,
+              "sha256": "f6fd21fe195d6e2340e2e3ecf506019e25eec1ae7998d400db22ab859a407f56",
+              "verification_seconds": 8.39179335499648
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              295.883277,
+              293.064108,
+              289.415999,
+              270.474303,
+              295.109737,
+              289.532539,
+              274.455784
+            ],
+            "v2": [
+              258.175367,
+              250.159564,
+              230.866484,
+              256.642341,
+              271.548484,
+              239.749366,
+              240.767506
+            ],
+            "v3": [
+              256.633802,
+              239.640105,
+              274.726518,
+              249.799231,
+              250.244644,
+              239.707995,
+              242.942719
+            ],
+            "v4": [
+              269.0669,
+              247.104913,
+              238.500054,
+              227.5291,
+              256.516249,
+              252.201244,
+              258.712972
+            ],
+            "python": [
+              6417.862956,
+              6490.197964,
+              6498.30657
+            ]
+          },
+          "median_ms": {
+            "python": 6490.197964,
+            "rust033": 289.532539,
+            "v2": 250.159564,
+            "v3": 249.799231,
+            "v4": 252.201244
+          }
+        },
+        "waves": {
+          "outputs": {
+            "rust033": {
+              "length": 99493105,
+              "sha256": "8a12f19545d4540a45530b73985cfbb258f2fcd803ae6db3505ee07d63812479"
+            },
+            "v2": {
+              "length": 99493105,
+              "sha256": "8a12f19545d4540a45530b73985cfbb258f2fcd803ae6db3505ee07d63812479"
+            },
+            "v3": {
+              "length": 99493105,
+              "sha256": "8a12f19545d4540a45530b73985cfbb258f2fcd803ae6db3505ee07d63812479"
+            },
+            "v4": {
+              "length": 99493105,
+              "sha256": "8a12f19545d4540a45530b73985cfbb258f2fcd803ae6db3505ee07d63812479"
+            },
+            "python": {
+              "length": 99493105,
+              "sha256": "8a12f19545d4540a45530b73985cfbb258f2fcd803ae6db3505ee07d63812479",
+              "verification_seconds": 12.241598248998343
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              542.58696,
+              576.922663,
+              562.116649,
+              565.403573,
+              553.772372,
+              593.043007,
+              545.796018
+            ],
+            "v2": [
+              303.27055,
+              277.892077,
+              276.457763,
+              282.700606,
+              286.263653,
+              314.967999,
+              301.825742
+            ],
+            "v3": [
+              296.161426,
+              290.603148,
+              291.518348,
+              303.734144,
+              281.423643,
+              296.941442,
+              293.316845
+            ],
+            "v4": [
+              317.099392,
+              292.258217,
+              281.425423,
+              306.457792,
+              285.507866,
+              303.783874,
+              274.014236
+            ],
+            "python": [
+              9242.374177,
+              9303.075474,
+              9400.306638
+            ]
+          },
+          "median_ms": {
+            "python": 9303.075474,
+            "rust033": 562.116649,
+            "v2": 286.263653,
+            "v3": 293.316845,
+            "v4": 292.258217
+          }
+        },
+        "wipe": {
+          "outputs": {
+            "rust033": {
+              "length": 15017384,
+              "sha256": "ec36e20cdf721bdddd805e686fd2ff5d548a5c45af306a49404d6a45a536762f"
+            },
+            "v2": {
+              "length": 15017384,
+              "sha256": "ec36e20cdf721bdddd805e686fd2ff5d548a5c45af306a49404d6a45a536762f"
+            },
+            "v3": {
+              "length": 15017384,
+              "sha256": "ec36e20cdf721bdddd805e686fd2ff5d548a5c45af306a49404d6a45a536762f"
+            },
+            "v4": {
+              "length": 15017384,
+              "sha256": "ec36e20cdf721bdddd805e686fd2ff5d548a5c45af306a49404d6a45a536762f"
+            },
+            "python": {
+              "length": 15017384,
+              "sha256": "ec36e20cdf721bdddd805e686fd2ff5d548a5c45af306a49404d6a45a536762f",
+              "verification_seconds": 1.5909831149983802
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              52.687883,
+              49.437659,
+              51.573402,
+              55.473182,
+              50.35902,
+              52.113127,
+              49.906535
+            ],
+            "v2": [
+              26.467303,
+              25.359412,
+              26.705335,
+              25.910767,
+              24.667594,
+              25.850756,
+              25.784876
+            ],
+            "v3": [
+              28.046309,
+              25.597274,
+              26.359312,
+              25.979708,
+              25.767066,
+              27.264291,
+              25.276691
+            ],
+            "v4": [
+              26.570554,
+              25.805166,
+              26.759825,
+              25.533664,
+              25.493052,
+              28.17101,
+              25.644335
+            ],
+            "python": [
+              1241.415487,
+              1246.568936,
+              1252.396711
+            ]
+          },
+          "median_ms": {
+            "python": 1246.568936,
+            "rust033": 51.573402,
+            "v2": 25.850756,
+            "v3": 25.979708,
+            "v4": 25.805166
+          }
+        }
+      },
+      "geomean_vs_rust": {
+        "v2": 1.3060104085444315,
+        "v3": 1.2834110226380775,
+        "v4": 1.3003476016513316
+      }
+    },
+    "400x100": {
+      "input_sha256": "9239b783918d90fd16c36fc34cc02accf9594ace80d8eeafd8bb909e15846a7d",
+      "input_bytes": 38687,
+      "results": {
+        "beams": {
+          "outputs": {
+            "rust033": {
+              "length": 906705306,
+              "sha256": "7856ed068d9045928f19c30472512ab09094330f51fc571b576d16eab8351036"
+            },
+            "v2": {
+              "length": 906705306,
+              "sha256": "7856ed068d9045928f19c30472512ab09094330f51fc571b576d16eab8351036"
+            },
+            "v3": {
+              "length": 906705306,
+              "sha256": "7856ed068d9045928f19c30472512ab09094330f51fc571b576d16eab8351036"
+            },
+            "v4": {
+              "length": 906705306,
+              "sha256": "7856ed068d9045928f19c30472512ab09094330f51fc571b576d16eab8351036"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "binarypath": {
+          "outputs": {
+            "rust033": {
+              "length": 1979718402,
+              "sha256": "249ef6f7b4b77e0aa7b742f00497ed2ce7b94294f4d78761cd7b638c5570c857"
+            },
+            "v2": {
+              "length": 1979718402,
+              "sha256": "249ef6f7b4b77e0aa7b742f00497ed2ce7b94294f4d78761cd7b638c5570c857"
+            },
+            "v3": {
+              "length": 1979718402,
+              "sha256": "249ef6f7b4b77e0aa7b742f00497ed2ce7b94294f4d78761cd7b638c5570c857"
+            },
+            "v4": {
+              "length": 1979718402,
+              "sha256": "249ef6f7b4b77e0aa7b742f00497ed2ce7b94294f4d78761cd7b638c5570c857"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              16671.644779,
+              19581.37164,
+              20397.494596,
+              20317.809945,
+              22001.332951,
+              21899.659035,
+              17665.681065
+            ],
+            "v2": [
+              8747.965022,
+              7787.582848,
+              13342.275082,
+              9983.806725,
+              16808.559294,
+              13196.726527,
+              6682.645879
+            ],
+            "v3": [
+              8515.071192,
+              8785.207933,
+              7214.693522,
+              13413.709558,
+              15620.453386,
+              13321.307097,
+              6761.160229
+            ],
+            "v4": [
+              7470.322327,
+              6576.234321,
+              13519.946114,
+              13833.25826,
+              9679.075015,
+              15445.521641,
+              6632.407651
+            ]
+          },
+          "median_ms": {
+            "rust033": 20317.809945,
+            "v2": 9983.806725,
+            "v3": 8785.207933,
+            "v4": 9679.075015
+          }
+        },
+        "blackhole": {
+          "outputs": {
+            "rust033": {
+              "length": 1304144954,
+              "sha256": "f59a9fb557074aaad8409a0ee921acd51f47f9cca06956265448c5a666771ddb"
+            },
+            "v2": {
+              "length": 1304144954,
+              "sha256": "f59a9fb557074aaad8409a0ee921acd51f47f9cca06956265448c5a666771ddb"
+            },
+            "v3": {
+              "length": 1304144954,
+              "sha256": "f59a9fb557074aaad8409a0ee921acd51f47f9cca06956265448c5a666771ddb"
+            },
+            "v4": {
+              "length": 1304144954,
+              "sha256": "f59a9fb557074aaad8409a0ee921acd51f47f9cca06956265448c5a666771ddb"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "bouncyballs": {
+          "outputs": {
+            "rust033": {
+              "length": 15173295335,
+              "sha256": "a9956020f26db39139e6744e569ebe9089a6e65e2dda9c3087457c82ff287bea"
+            },
+            "v2": {
+              "length": 15173295335,
+              "sha256": "a9956020f26db39139e6744e569ebe9089a6e65e2dda9c3087457c82ff287bea"
+            },
+            "v3": {
+              "length": 15173295335,
+              "sha256": "a9956020f26db39139e6744e569ebe9089a6e65e2dda9c3087457c82ff287bea"
+            },
+            "v4": {
+              "length": 15173295335,
+              "sha256": "a9956020f26db39139e6744e569ebe9089a6e65e2dda9c3087457c82ff287bea"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "bubbles": {
+          "outputs": {
+            "rust033": {
+              "length": 19416916819,
+              "sha256": "5607e91df25e6b2f15588e08f1baf50d18dfce85224de3f330849bbdf1b7fef6"
+            },
+            "v2": {
+              "length": 19416916819,
+              "sha256": "5607e91df25e6b2f15588e08f1baf50d18dfce85224de3f330849bbdf1b7fef6"
+            },
+            "v3": {
+              "length": 19416916819,
+              "sha256": "5607e91df25e6b2f15588e08f1baf50d18dfce85224de3f330849bbdf1b7fef6"
+            },
+            "v4": {
+              "length": 19416916819,
+              "sha256": "5607e91df25e6b2f15588e08f1baf50d18dfce85224de3f330849bbdf1b7fef6"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "burn": {
+          "outputs": {
+            "rust033": {
+              "length": 9362382222,
+              "sha256": "97e4a50fb4cbc0e05f00366d21e95f82a9dfc41b1d54a308afcaee628f858f9b"
+            },
+            "v2": {
+              "length": 9362382222,
+              "sha256": "97e4a50fb4cbc0e05f00366d21e95f82a9dfc41b1d54a308afcaee628f858f9b"
+            },
+            "v3": {
+              "length": 9362382222,
+              "sha256": "97e4a50fb4cbc0e05f00366d21e95f82a9dfc41b1d54a308afcaee628f858f9b"
+            },
+            "v4": {
+              "length": 9362382222,
+              "sha256": "97e4a50fb4cbc0e05f00366d21e95f82a9dfc41b1d54a308afcaee628f858f9b"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              4110.225152,
+              4060.011594,
+              4061.554267,
+              4061.923921,
+              4083.679499,
+              5560.693129,
+              4410.981201
+            ],
+            "v2": [
+              2595.631474,
+              2575.005684,
+              2553.073957,
+              2581.991612,
+              2562.993455,
+              2659.179208,
+              2647.871346
+            ],
+            "v3": [
+              2788.803421,
+              2785.77456,
+              2757.576954,
+              2750.462829,
+              2834.630255,
+              3834.295467,
+              4269.062494
+            ],
+            "v4": [
+              2714.067473,
+              2638.016818,
+              2583.568114,
+              2578.98469,
+              2868.250773,
+              2582.180971,
+              3005.307051
+            ]
+          },
+          "median_ms": {
+            "rust033": 4083.679499,
+            "v2": 2581.991612,
+            "v3": 2788.803421,
+            "v4": 2638.016818
+          }
+        },
+        "colorshift": {
+          "outputs": {
+            "rust033": {
+              "length": 369184409,
+              "sha256": "19fbd097056e9516ef3c46540f8c587fcc18ebacb9aee915e81aabdb10cb7e2d"
+            },
+            "v2": {
+              "length": 369184409,
+              "sha256": "19fbd097056e9516ef3c46540f8c587fcc18ebacb9aee915e81aabdb10cb7e2d"
+            },
+            "v3": {
+              "length": 369184409,
+              "sha256": "19fbd097056e9516ef3c46540f8c587fcc18ebacb9aee915e81aabdb10cb7e2d"
+            },
+            "v4": {
+              "length": 369184409,
+              "sha256": "19fbd097056e9516ef3c46540f8c587fcc18ebacb9aee915e81aabdb10cb7e2d"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "crumble": {
+          "outputs": {
+            "rust033": {
+              "length": 853724428,
+              "sha256": "f9de2865c299c8839e06133bbf3e54ebe893b1fd1c38b1ac44bc9ffca0ef40f8"
+            },
+            "v2": {
+              "length": 853724428,
+              "sha256": "f9de2865c299c8839e06133bbf3e54ebe893b1fd1c38b1ac44bc9ffca0ef40f8"
+            },
+            "v3": {
+              "length": 853724428,
+              "sha256": "f9de2865c299c8839e06133bbf3e54ebe893b1fd1c38b1ac44bc9ffca0ef40f8"
+            },
+            "v4": {
+              "length": 853724428,
+              "sha256": "f9de2865c299c8839e06133bbf3e54ebe893b1fd1c38b1ac44bc9ffca0ef40f8"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "decrypt": {
+          "outputs": {
+            "rust033": {
+              "length": 7526322436,
+              "sha256": "1e09957111cac910da313e251736b9d2648cf9678289c8f8afb6a12c9e0cd490"
+            },
+            "v2": {
+              "length": 7526322436,
+              "sha256": "1e09957111cac910da313e251736b9d2648cf9678289c8f8afb6a12c9e0cd490"
+            },
+            "v3": {
+              "length": 7526322436,
+              "sha256": "1e09957111cac910da313e251736b9d2648cf9678289c8f8afb6a12c9e0cd490"
+            },
+            "v4": {
+              "length": 7526322436,
+              "sha256": "1e09957111cac910da313e251736b9d2648cf9678289c8f8afb6a12c9e0cd490"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              5821.042444,
+              6314.579485,
+              6307.759357,
+              5811.258077,
+              5782.018687,
+              5572.989265,
+              5262.702455
+            ],
+            "v2": [
+              3029.664788,
+              3118.816222,
+              2966.920269,
+              4058.060289,
+              3072.796265,
+              3076.520617,
+              3788.142738
+            ],
+            "v3": [
+              3184.57144,
+              3379.626374,
+              3300.027301,
+              3454.355223,
+              3246.338527,
+              3217.082194,
+              3325.243694
+            ],
+            "v4": [
+              2918.105627,
+              3254.472648,
+              3563.178964,
+              3340.165037,
+              3015.893457,
+              3017.586531,
+              3685.285342
+            ]
+          },
+          "median_ms": {
+            "rust033": 5811.258077,
+            "v2": 3076.520617,
+            "v3": 3300.027301,
+            "v4": 3254.472648
+          }
+        },
+        "errorcorrect": {
+          "outputs": {
+            "rust033": {
+              "length": 15525472553,
+              "sha256": "5462d542ee98c1d0ad0153eef3fd5de2ca266a42b603447bf2d393440f282ed6"
+            },
+            "v2": {
+              "length": 15525472553,
+              "sha256": "5462d542ee98c1d0ad0153eef3fd5de2ca266a42b603447bf2d393440f282ed6"
+            },
+            "v3": {
+              "length": 15525472553,
+              "sha256": "5462d542ee98c1d0ad0153eef3fd5de2ca266a42b603447bf2d393440f282ed6"
+            },
+            "v4": {
+              "length": 15525472553,
+              "sha256": "5462d542ee98c1d0ad0153eef3fd5de2ca266a42b603447bf2d393440f282ed6"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "expand": {
+          "outputs": {
+            "rust033": {
+              "length": 295184282,
+              "sha256": "63008e8a945143997f614dd8e81977ecf3017fa791a54853226eded4ef9f2113"
+            },
+            "v2": {
+              "length": 295184282,
+              "sha256": "63008e8a945143997f614dd8e81977ecf3017fa791a54853226eded4ef9f2113"
+            },
+            "v3": {
+              "length": 295184282,
+              "sha256": "63008e8a945143997f614dd8e81977ecf3017fa791a54853226eded4ef9f2113"
+            },
+            "v4": {
+              "length": 295184282,
+              "sha256": "63008e8a945143997f614dd8e81977ecf3017fa791a54853226eded4ef9f2113"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "fireworks": {
+          "outputs": {
+            "rust033": {
+              "length": 745926765,
+              "sha256": "c5801dc3fae7961eba0e4f0dde405036bdbdc2daa089685cc7c6a4395dc1fb2a"
+            },
+            "v2": {
+              "length": 745926765,
+              "sha256": "c5801dc3fae7961eba0e4f0dde405036bdbdc2daa089685cc7c6a4395dc1fb2a"
+            },
+            "v3": {
+              "length": 745926765,
+              "sha256": "c5801dc3fae7961eba0e4f0dde405036bdbdc2daa089685cc7c6a4395dc1fb2a"
+            },
+            "v4": {
+              "length": 745926765,
+              "sha256": "c5801dc3fae7961eba0e4f0dde405036bdbdc2daa089685cc7c6a4395dc1fb2a"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "highlight": {
+          "outputs": {
+            "rust033": {
+              "length": 93093578,
+              "sha256": "eb4d355a69a213c9a47cef9d4920c7483406be6ad174735d968fb760e74d8864"
+            },
+            "v2": {
+              "length": 93093578,
+              "sha256": "eb4d355a69a213c9a47cef9d4920c7483406be6ad174735d968fb760e74d8864"
+            },
+            "v3": {
+              "length": 93093578,
+              "sha256": "eb4d355a69a213c9a47cef9d4920c7483406be6ad174735d968fb760e74d8864"
+            },
+            "v4": {
+              "length": 93093578,
+              "sha256": "eb4d355a69a213c9a47cef9d4920c7483406be6ad174735d968fb760e74d8864"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "laseretch": {
+          "outputs": {
+            "rust033": {
+              "length": 23316383419,
+              "sha256": "17f69c37c580c3d97bab41112e0a155e834b3b638b17cdf7138d6162a7da7b22"
+            },
+            "v2": {
+              "length": 23316383419,
+              "sha256": "17f69c37c580c3d97bab41112e0a155e834b3b638b17cdf7138d6162a7da7b22"
+            },
+            "v3": {
+              "length": 23316383419,
+              "sha256": "17f69c37c580c3d97bab41112e0a155e834b3b638b17cdf7138d6162a7da7b22"
+            },
+            "v4": {
+              "length": 23316383419,
+              "sha256": "17f69c37c580c3d97bab41112e0a155e834b3b638b17cdf7138d6162a7da7b22"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "matrix": {
+          "outputs": {
+            "rust033": {
+              "length": 2391724121,
+              "sha256": "913b5986b6d932801477a34d8b5a367d112de96476695d61dd695e5ab139bf13"
+            },
+            "v2": {
+              "length": 2391724121,
+              "sha256": "913b5986b6d932801477a34d8b5a367d112de96476695d61dd695e5ab139bf13"
+            },
+            "v3": {
+              "length": 2391724121,
+              "sha256": "913b5986b6d932801477a34d8b5a367d112de96476695d61dd695e5ab139bf13"
+            },
+            "v4": {
+              "length": 2391724121,
+              "sha256": "913b5986b6d932801477a34d8b5a367d112de96476695d61dd695e5ab139bf13"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "middleout": {
+          "outputs": {
+            "rust033": {
+              "length": 85256359,
+              "sha256": "a32499bdcd34f7c922b3f1445954852285590952c8aece6592091034bb85b81b"
+            },
+            "v2": {
+              "length": 85256359,
+              "sha256": "a32499bdcd34f7c922b3f1445954852285590952c8aece6592091034bb85b81b"
+            },
+            "v3": {
+              "length": 85256359,
+              "sha256": "a32499bdcd34f7c922b3f1445954852285590952c8aece6592091034bb85b81b"
+            },
+            "v4": {
+              "length": 85256359,
+              "sha256": "a32499bdcd34f7c922b3f1445954852285590952c8aece6592091034bb85b81b"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "orbittingvolley": {
+          "outputs": {
+            "rust033": {
+              "length": 557081780,
+              "sha256": "606d470dd5eb9700535172cdb318827b763dd9778d79f73f8fa95721841a8a94"
+            },
+            "v2": {
+              "length": 557081780,
+              "sha256": "606d470dd5eb9700535172cdb318827b763dd9778d79f73f8fa95721841a8a94"
+            },
+            "v3": {
+              "length": 557081780,
+              "sha256": "606d470dd5eb9700535172cdb318827b763dd9778d79f73f8fa95721841a8a94"
+            },
+            "v4": {
+              "length": 557081780,
+              "sha256": "606d470dd5eb9700535172cdb318827b763dd9778d79f73f8fa95721841a8a94"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "overflow": {
+          "outputs": {
+            "rust033": {
+              "length": 424819895,
+              "sha256": "1c1dea3c7ae955f65051e220318625c67e221eb3a80fc74bd5881e4089c62cb6"
+            },
+            "v2": {
+              "length": 424819895,
+              "sha256": "1c1dea3c7ae955f65051e220318625c67e221eb3a80fc74bd5881e4089c62cb6"
+            },
+            "v3": {
+              "length": 424819895,
+              "sha256": "1c1dea3c7ae955f65051e220318625c67e221eb3a80fc74bd5881e4089c62cb6"
+            },
+            "v4": {
+              "length": 424819895,
+              "sha256": "1c1dea3c7ae955f65051e220318625c67e221eb3a80fc74bd5881e4089c62cb6"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "pour": {
+          "outputs": {
+            "rust033": {
+              "length": 11471426873,
+              "sha256": "0b0a3b882c3286173e35f6249a7b6e354ccc74f96d2cceac267111e865ba73c1"
+            },
+            "v2": {
+              "length": 11471426873,
+              "sha256": "0b0a3b882c3286173e35f6249a7b6e354ccc74f96d2cceac267111e865ba73c1"
+            },
+            "v3": {
+              "length": 11471426873,
+              "sha256": "0b0a3b882c3286173e35f6249a7b6e354ccc74f96d2cceac267111e865ba73c1"
+            },
+            "v4": {
+              "length": 11471426873,
+              "sha256": "0b0a3b882c3286173e35f6249a7b6e354ccc74f96d2cceac267111e865ba73c1"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "print": {
+          "outputs": {
+            "rust033": {
+              "length": 20128006987,
+              "sha256": "7685e54c625f02a29e70be4057e6950761a7d32155987198fe30638f0843bf3d"
+            },
+            "v2": {
+              "length": 20128006987,
+              "sha256": "7685e54c625f02a29e70be4057e6950761a7d32155987198fe30638f0843bf3d"
+            },
+            "v3": {
+              "length": 20128006987,
+              "sha256": "7685e54c625f02a29e70be4057e6950761a7d32155987198fe30638f0843bf3d"
+            },
+            "v4": {
+              "length": 20128006987,
+              "sha256": "7685e54c625f02a29e70be4057e6950761a7d32155987198fe30638f0843bf3d"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "rain": {
+          "outputs": {
+            "rust033": {
+              "length": 7979770680,
+              "sha256": "52f270df0ccd66fd3a6e25b3814b65a85934f9a9ca348792a601ce06500b94a6"
+            },
+            "v2": {
+              "length": 7979770680,
+              "sha256": "52f270df0ccd66fd3a6e25b3814b65a85934f9a9ca348792a601ce06500b94a6"
+            },
+            "v3": {
+              "length": 7979770680,
+              "sha256": "52f270df0ccd66fd3a6e25b3814b65a85934f9a9ca348792a601ce06500b94a6"
+            },
+            "v4": {
+              "length": 7979770680,
+              "sha256": "52f270df0ccd66fd3a6e25b3814b65a85934f9a9ca348792a601ce06500b94a6"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "randomsequence": {
+          "outputs": {
+            "rust033": {
+              "length": 97033327,
+              "sha256": "5d99212700410625e261016deda4e8072b6d977ef35db01dd486c76401d6023b"
+            },
+            "v2": {
+              "length": 97033327,
+              "sha256": "5d99212700410625e261016deda4e8072b6d977ef35db01dd486c76401d6023b"
+            },
+            "v3": {
+              "length": 97033327,
+              "sha256": "5d99212700410625e261016deda4e8072b6d977ef35db01dd486c76401d6023b"
+            },
+            "v4": {
+              "length": 97033327,
+              "sha256": "5d99212700410625e261016deda4e8072b6d977ef35db01dd486c76401d6023b"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "rings": {
+          "outputs": {
+            "rust033": {
+              "length": 601098621,
+              "sha256": "fa8231c2fb3d305be10be71b57d65921abb1f2025a5655e0a8bc3b4074f57431"
+            },
+            "v2": {
+              "length": 601098621,
+              "sha256": "fa8231c2fb3d305be10be71b57d65921abb1f2025a5655e0a8bc3b4074f57431"
+            },
+            "v3": {
+              "length": 601098621,
+              "sha256": "fa8231c2fb3d305be10be71b57d65921abb1f2025a5655e0a8bc3b4074f57431"
+            },
+            "v4": {
+              "length": 601098621,
+              "sha256": "fa8231c2fb3d305be10be71b57d65921abb1f2025a5655e0a8bc3b4074f57431"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              2789.030806,
+              3184.041986,
+              3800.051768,
+              2654.596045,
+              2703.089975,
+              2740.671985,
+              2815.299488
+            ],
+            "v2": [
+              2917.528623,
+              2899.35724,
+              2889.507976,
+              3060.204181,
+              3108.548948,
+              2955.51308,
+              3020.282329
+            ],
+            "v3": [
+              2840.895943,
+              3089.605711,
+              2887.631196,
+              2886.56152,
+              2864.217093,
+              3182.763809,
+              2797.713866
+            ],
+            "v4": [
+              3102.002652,
+              2960.666219,
+              3412.116348,
+              3511.300772,
+              2893.855073,
+              2942.170699,
+              2814.811755
+            ]
+          },
+          "median_ms": {
+            "rust033": 2789.030806,
+            "v2": 2955.51308,
+            "v3": 2886.56152,
+            "v4": 2960.666219
+          }
+        },
+        "scattered": {
+          "outputs": {
+            "rust033": {
+              "length": 530298457,
+              "sha256": "ebbb3073d4b0e93be5ffe79c21e282f4696b2c27f3bf2ebb04c9bccf5a120b59"
+            },
+            "v2": {
+              "length": 530298457,
+              "sha256": "ebbb3073d4b0e93be5ffe79c21e282f4696b2c27f3bf2ebb04c9bccf5a120b59"
+            },
+            "v3": {
+              "length": 530298457,
+              "sha256": "ebbb3073d4b0e93be5ffe79c21e282f4696b2c27f3bf2ebb04c9bccf5a120b59"
+            },
+            "v4": {
+              "length": 530298457,
+              "sha256": "ebbb3073d4b0e93be5ffe79c21e282f4696b2c27f3bf2ebb04c9bccf5a120b59"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "slice": {
+          "outputs": {
+            "rust033": {
+              "length": 387337251,
+              "sha256": "2f15959f7760ba2b0c8af15074e522240448e589a9fc4e85e7ccee6a8b1ac98d"
+            },
+            "v2": {
+              "length": 387337251,
+              "sha256": "2f15959f7760ba2b0c8af15074e522240448e589a9fc4e85e7ccee6a8b1ac98d"
+            },
+            "v3": {
+              "length": 387337251,
+              "sha256": "2f15959f7760ba2b0c8af15074e522240448e589a9fc4e85e7ccee6a8b1ac98d"
+            },
+            "v4": {
+              "length": 387337251,
+              "sha256": "2f15959f7760ba2b0c8af15074e522240448e589a9fc4e85e7ccee6a8b1ac98d"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "slide": {
+          "outputs": {
+            "rust033": {
+              "length": 298088919,
+              "sha256": "fa37c575a7606fb0203c21b34a13756a10a717c039027cc7917b6a879a179055"
+            },
+            "v2": {
+              "length": 298088919,
+              "sha256": "fa37c575a7606fb0203c21b34a13756a10a717c039027cc7917b6a879a179055"
+            },
+            "v3": {
+              "length": 298088919,
+              "sha256": "fa37c575a7606fb0203c21b34a13756a10a717c039027cc7917b6a879a179055"
+            },
+            "v4": {
+              "length": 298088919,
+              "sha256": "fa37c575a7606fb0203c21b34a13756a10a717c039027cc7917b6a879a179055"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              669.954578,
+              667.900626,
+              680.925566,
+              697.222766,
+              677.045509,
+              685.254988,
+              686.36115
+            ],
+            "v2": [
+              412.714127,
+              410.815028,
+              415.518624,
+              416.09164,
+              413.791657,
+              434.130937,
+              416.861318
+            ],
+            "v3": [
+              425.31944,
+              423.528753,
+              441.430429,
+              434.932445,
+              419.607644,
+              423.956097,
+              437.994184
+            ],
+            "v4": [
+              413.116911,
+              416.41031,
+              416.824597,
+              413.15494,
+              415.488574,
+              417.533104,
+              418.13646
+            ]
+          },
+          "median_ms": {
+            "rust033": 680.925566,
+            "v2": 415.518624,
+            "v3": 425.31944,
+            "v4": 416.41031
+          }
+        },
+        "smoke": {
+          "outputs": {
+            "rust033": {
+              "length": 1296491438,
+              "sha256": "62295e349c0fd556e8b43db3c68ecff596ccd0c83e73d1e2270d76a225a36700"
+            },
+            "v2": {
+              "length": 1296491438,
+              "sha256": "62295e349c0fd556e8b43db3c68ecff596ccd0c83e73d1e2270d76a225a36700"
+            },
+            "v3": {
+              "length": 1296491438,
+              "sha256": "62295e349c0fd556e8b43db3c68ecff596ccd0c83e73d1e2270d76a225a36700"
+            },
+            "v4": {
+              "length": 1296491438,
+              "sha256": "62295e349c0fd556e8b43db3c68ecff596ccd0c83e73d1e2270d76a225a36700"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "spotlights": {
+          "outputs": {
+            "rust033": {
+              "length": 740897305,
+              "sha256": "2d430fa3cd6222cac4fc52f892add6e4a7e4cdf6beaed3036ec369b0db63f6aa"
+            },
+            "v2": {
+              "length": 740897305,
+              "sha256": "2d430fa3cd6222cac4fc52f892add6e4a7e4cdf6beaed3036ec369b0db63f6aa"
+            },
+            "v3": {
+              "length": 740897305,
+              "sha256": "2d430fa3cd6222cac4fc52f892add6e4a7e4cdf6beaed3036ec369b0db63f6aa"
+            },
+            "v4": {
+              "length": 740897305,
+              "sha256": "2d430fa3cd6222cac4fc52f892add6e4a7e4cdf6beaed3036ec369b0db63f6aa"
+            }
+          },
+          "times_ms": {
+            "rust033": [
+              1962.722588,
+              1882.157079,
+              1801.709091,
+              1824.397674,
+              1815.320685,
+              1810.540939,
+              1860.56015
+            ],
+            "v2": [
+              1156.128728,
+              1185.863291,
+              1132.389377,
+              1129.201736,
+              1130.525069,
+              1131.71478,
+              1134.173095
+            ],
+            "v3": [
+              1227.037733,
+              1171.318158,
+              1188.147713,
+              1167.019526,
+              1183.908232,
+              1170.35004,
+              1158.638026
+            ],
+            "v4": [
+              1181.80465,
+              1154.196769,
+              1143.545066,
+              1154.235331,
+              1128.864842,
+              1142.229493,
+              1154.596396
+            ]
+          },
+          "median_ms": {
+            "rust033": 1824.397674,
+            "v2": 1132.389377,
+            "v3": 1171.318158,
+            "v4": 1154.196769
+          }
+        },
+        "spray": {
+          "outputs": {
+            "rust033": {
+              "length": 554131414,
+              "sha256": "c3933722c6653d036e5baf154a187cff02ac54958853cb849856734843daed5a"
+            },
+            "v2": {
+              "length": 554131414,
+              "sha256": "c3933722c6653d036e5baf154a187cff02ac54958853cb849856734843daed5a"
+            },
+            "v3": {
+              "length": 554131414,
+              "sha256": "c3933722c6653d036e5baf154a187cff02ac54958853cb849856734843daed5a"
+            },
+            "v4": {
+              "length": 554131414,
+              "sha256": "c3933722c6653d036e5baf154a187cff02ac54958853cb849856734843daed5a"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "swarm": {
+          "outputs": {
+            "rust033": {
+              "length": 3986300496,
+              "sha256": "5159e8027c306bd11d0a19097d7137524cb145117aa673428b702d47282e9937"
+            },
+            "v2": {
+              "length": 3986300496,
+              "sha256": "5159e8027c306bd11d0a19097d7137524cb145117aa673428b702d47282e9937"
+            },
+            "v3": {
+              "length": 3986300496,
+              "sha256": "5159e8027c306bd11d0a19097d7137524cb145117aa673428b702d47282e9937"
+            },
+            "v4": {
+              "length": 3986300496,
+              "sha256": "5159e8027c306bd11d0a19097d7137524cb145117aa673428b702d47282e9937"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "sweep": {
+          "outputs": {
+            "rust033": {
+              "length": 162780438,
+              "sha256": "e637cfbf094863280fc929116266e63c26e9ef67057dbabeba76f3310fef59ae"
+            },
+            "v2": {
+              "length": 162780438,
+              "sha256": "e637cfbf094863280fc929116266e63c26e9ef67057dbabeba76f3310fef59ae"
+            },
+            "v3": {
+              "length": 162780438,
+              "sha256": "e637cfbf094863280fc929116266e63c26e9ef67057dbabeba76f3310fef59ae"
+            },
+            "v4": {
+              "length": 162780438,
+              "sha256": "e637cfbf094863280fc929116266e63c26e9ef67057dbabeba76f3310fef59ae"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "synthgrid": {
+          "outputs": {
+            "rust033": {
+              "length": 187960601,
+              "sha256": "7924f6a9d8677c6fa5a316c60bb6edd544be70d794d183095a9de35b79806c55"
+            },
+            "v2": {
+              "length": 187960601,
+              "sha256": "7924f6a9d8677c6fa5a316c60bb6edd544be70d794d183095a9de35b79806c55"
+            },
+            "v3": {
+              "length": 187960601,
+              "sha256": "7924f6a9d8677c6fa5a316c60bb6edd544be70d794d183095a9de35b79806c55"
+            },
+            "v4": {
+              "length": 187960601,
+              "sha256": "7924f6a9d8677c6fa5a316c60bb6edd544be70d794d183095a9de35b79806c55"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "thunderstorm": {
+          "outputs": {
+            "rust033": {
+              "length": 1721068473,
+              "sha256": "d4cd73f57551309d06b27e43ebc94fd95969968a0d924d3e154365c2e792abd4"
+            },
+            "v2": {
+              "length": 1721068473,
+              "sha256": "d4cd73f57551309d06b27e43ebc94fd95969968a0d924d3e154365c2e792abd4"
+            },
+            "v3": {
+              "length": 1721068473,
+              "sha256": "d4cd73f57551309d06b27e43ebc94fd95969968a0d924d3e154365c2e792abd4"
+            },
+            "v4": {
+              "length": 1721068473,
+              "sha256": "d4cd73f57551309d06b27e43ebc94fd95969968a0d924d3e154365c2e792abd4"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "unstable": {
+          "outputs": {
+            "rust033": {
+              "length": 431046766,
+              "sha256": "f614655fce0ff11a273bbd1212d023f2d702b86be397667ea8c61d8919fa35db"
+            },
+            "v2": {
+              "length": 431046766,
+              "sha256": "f614655fce0ff11a273bbd1212d023f2d702b86be397667ea8c61d8919fa35db"
+            },
+            "v3": {
+              "length": 431046766,
+              "sha256": "f614655fce0ff11a273bbd1212d023f2d702b86be397667ea8c61d8919fa35db"
+            },
+            "v4": {
+              "length": 431046766,
+              "sha256": "f614655fce0ff11a273bbd1212d023f2d702b86be397667ea8c61d8919fa35db"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "vhstape": {
+          "outputs": {
+            "rust033": {
+              "length": 572223913,
+              "sha256": "cf8ef62d7d4c81b4841225408eb58307ff1025d25e1b895c79517b0e81407d4e"
+            },
+            "v2": {
+              "length": 572223913,
+              "sha256": "cf8ef62d7d4c81b4841225408eb58307ff1025d25e1b895c79517b0e81407d4e"
+            },
+            "v3": {
+              "length": 572223913,
+              "sha256": "cf8ef62d7d4c81b4841225408eb58307ff1025d25e1b895c79517b0e81407d4e"
+            },
+            "v4": {
+              "length": 572223913,
+              "sha256": "cf8ef62d7d4c81b4841225408eb58307ff1025d25e1b895c79517b0e81407d4e"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "waves": {
+          "outputs": {
+            "rust033": {
+              "length": 489309349,
+              "sha256": "9737373c7a23b7137d7576241fd14a67be8a90afdab14b4f2f3ac06ed6db0531"
+            },
+            "v2": {
+              "length": 489309349,
+              "sha256": "9737373c7a23b7137d7576241fd14a67be8a90afdab14b4f2f3ac06ed6db0531"
+            },
+            "v3": {
+              "length": 489309349,
+              "sha256": "9737373c7a23b7137d7576241fd14a67be8a90afdab14b4f2f3ac06ed6db0531"
+            },
+            "v4": {
+              "length": 489309349,
+              "sha256": "9737373c7a23b7137d7576241fd14a67be8a90afdab14b4f2f3ac06ed6db0531"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        },
+        "wipe": {
+          "outputs": {
+            "rust033": {
+              "length": 64184690,
+              "sha256": "91fbf0fa7cf217436ae3d6eed080a9ccd47a6eb088fd9caf91776f2ea7139e80"
+            },
+            "v2": {
+              "length": 64184690,
+              "sha256": "91fbf0fa7cf217436ae3d6eed080a9ccd47a6eb088fd9caf91776f2ea7139e80"
+            },
+            "v3": {
+              "length": 64184690,
+              "sha256": "91fbf0fa7cf217436ae3d6eed080a9ccd47a6eb088fd9caf91776f2ea7139e80"
+            },
+            "v4": {
+              "length": 64184690,
+              "sha256": "91fbf0fa7cf217436ae3d6eed080a9ccd47a6eb088fd9caf91776f2ea7139e80"
+            }
+          },
+          "times_ms": {
+            "rust033": [],
+            "v2": [],
+            "v3": [],
+            "v4": []
+          },
+          "median_ms": {}
+        }
+      },
+      "geomean_vs_rust": {
+        "v2": 1.5729811923565613,
+        "v3": 1.5592010792774622,
+        "v4": 1.5548245582288074
+      }
+    }
+  },
+  "best_tier": "v2",
+  "completed_utc": "2026-09-28T09:55:59Z"
+}

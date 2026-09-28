@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+"""Compare CLI contracts against the pinned pure-Rust oracle, including help and completions."""
+import argparse
+import os
+import re
+from pathlib import Path
+import subprocess
+
+ROOT = Path(__file__).resolve().parents[1]
+REFERENCE_ROOT = Path(os.environ.get("TTFX_REFERENCE_ROOT", str(ROOT.parent))).resolve()
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--candidate', type=Path, default=ROOT / 'artifacts/linux-x64-v2/ttfx')
+parser.add_argument('--reference', type=Path, default=REFERENCE_ROOT / 'target/csharp-bin/rust-0.4.0/release/ttfx')
+args = parser.parse_args()
+env = {k: v for k, v in os.environ.items() if not k.startswith('TTFX_')}
+env.update(TTFX_ASM='0', COLUMNS='80', LINES='24', NO_COLOR='1')
+reference = args.reference.resolve()
+candidate = args.candidate.resolve()
+effects = ['beams', 'binarypath', 'blackhole', 'bouncyballs', 'bubbles', 'burn',
+           'colorshift', 'crumble', 'decrypt', 'errorcorrect', 'expand', 'fireworks',
+           'highlight', 'laseretch', 'matrix', 'middleout', 'orbittingvolley', 'overflow',
+           'pour', 'print', 'rain', 'randomsequence', 'rings', 'scattered', 'slice', 'slide',
+           'smoke', 'spotlights', 'spray', 'swarm', 'sweep', 'synthgrid', 'thunderstorm',
+           'unstable', 'vhstape', 'waves', 'wipe']
+
+cases = [['--help'], ['help']]
+for effect in effects:
+    cases.extend([[effect, '--help'], ['help', effect]])
+cases.extend([['--print-completion', shell] for shell in ['bash', 'zsh']])
+cases.extend([
+    ['--seed', '99999999999999999999'], ['--seed', ''],
+    ['--seed', '1', '--seed', '2', 'wipe'], ['--seed', '--parity-dump', 'wipe'],
+    ['slide', '--movement-speed', '-1e21'],
+    ['wipe', '--final-gradient-stops', 'zz', '00ff00', '0000ff'],
+    ['wipe', '--final-gradient-steps', '12', 'bad', '3'],
+    ['--no-color', '--no-color', 'wipe'], ['--input-file', '-'],
+    ['--input-file', '--no-color'], *[['--print-completion', shell] for shell in ['', 'bashh', 'fish', 'powershell', 'BASH', 'zshh', 'sh', 'foo']],
+    ['wipe', '--final-gradient-steps', '1', '--final-gradient-steps', '2'],
+    ['--version', '-v'], ['--canvas-width', '-wat', 'wipe'],
+])
+for flag in ['--seed', '--max-frames', '--frame-rate', '--canvas-width']:
+    for value in ['', '+', '++1', '-1', '18446744073709551616', '1a']:
+        cases.append([flag + '=' + value, 'wipe'])
+
+# Successful output cases need deterministic, bounded rendering. Error cases above are unmodified.
+prefix = ['--seed', '1', '--parity-dump', '--max-frames', '5']
+for effect in effects:
+    cases.append(prefix + [effect])
+    cases.append(prefix + ['-R', '--include-effects', effect])
+
+# Derive option names from the oracle's public help, then compare boundary behavior.
+# This catches differences between built-in clap parsers and custom validators.
+for effect in effects:
+    help_text = subprocess.check_output([str(reference), effect, '--help'], text=True, env=env)
+    for flag in re.findall(r'^\s*(--[\w-]+) <', help_text, re.MULTILINE):
+        cases.append(['--seed', '1', '--virtual-clock', '--frame-rate', '0',
+                      '--max-frames', '1', effect, flag])
+        for value in ['bad', '0', '-1', '']:
+            cases.append(['--seed', '1', '--virtual-clock', '--frame-rate', '0',
+                          '--max-frames', '1', effect, flag + '=' + value])
+
+failures = 0
+for case in cases:
+    results = []
+    for binary in [reference, candidate]:
+        result = subprocess.run([str(binary), *case], input=b'x', capture_output=True,
+                                env=env, timeout=10)
+        # The executable's introductory implementation label is deliberately different.
+        stdout = result.stdout.replace(
+            b'Terminal text effects (C# implementation of terminaltexteffects)',
+            b'Terminal text effects (Rust port of terminaltexteffects)')
+        results.append((result.returncode, stdout, result.stderr))
+    if results[0] != results[1]:
+        failures += 1
+        print(case, '\nRust:', results[0], '\nC#:', results[1])
+print(f'CLI differential: {len(cases) - failures}/{len(cases)} passed')
+raise SystemExit(bool(failures))

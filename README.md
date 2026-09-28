@@ -1,5 +1,26 @@
 # ttfx
 
+This is a test repository to see how fast an independent C# port of ttfx can get
+compared with Rust and Python. The original Rust project and its documentation
+are preserved below.
+
+## C# performance comparison
+
+At **200×50**, the .NET 11 NativeAOT **v2** build is **1.31× as fast as ttfx
+0.3.3 (Rust)** across all 37 effects (geometric mean), and faster on **33/37**.
+Against Python TerminalTextEffects, the ratio is **33.2×**; Python was timed in
+a separate batch on the same machine and input, so that comparison is contextual.
+
+Each compiled implementation ran complete animations on one pinned core and one
+thread of a 16-core Linux machine, without asm or fx. All 37 C# outputs matched
+Rust byte-for-byte at both 200×50 and 400×100 in v2, v3, and v4. The portable
+v2 build meets the five-effect geometric-mean target and the 0.90× floor for
+all six required effects at both sizes.
+
+[Full 37-effect table, method, portable-v2 timings, and validation](csharp/benchmarks/results/2026-09-28/results.md).
+The independent C# implementation, build instructions, and tests are in
+[csharp/](csharp/README.md).
+
 Terminal text effects as a single static binary. Pipe text in, pick an effect:
 
 ```sh

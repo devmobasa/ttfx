@@ -21,6 +21,14 @@ BINARY = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "target/releas
 EFFECT = sys.argv[2] if len(sys.argv) > 2 else "decrypt"
 RUST = "0"
 ASM = "force"
+REFERENCE = os.environ.get("REFERENCE_BIN")
+CANDIDATE = os.environ.get("CANDIDATE_BIN")
+if bool(REFERENCE) != bool(CANDIDATE):
+    sys.exit("pty: REFERENCE_BIN and CANDIDATE_BIN must both be set")
+if REFERENCE:
+    for selected in (REFERENCE, CANDIDATE):
+        if not os.path.isfile(selected) or not os.access(selected, os.X_OK):
+            sys.exit(f"pty: binary is not executable: {selected}")
 INPUT = b"Hello, World!\nThis is ttfx.\n\tTabbed\n"
 
 
@@ -33,8 +41,12 @@ def run(engine, args, cols=80, rows=24, send=None, after=0.0):
         os.dup2(r_in, 0)
         os.close(w_in)
         env = {k: v for k, v in os.environ.items() if k not in ("COLUMNS", "LINES")}
-        env["TTFX_ASM"] = engine
-        os.execve(BINARY, [BINARY] + args, env)
+        if REFERENCE:
+            binary = REFERENCE if engine == RUST else CANDIDATE
+        else:
+            binary = BINARY
+            env["TTFX_ASM"] = engine
+        os.execve(binary, [binary] + args, env)
     fcntl.ioctl(master, termios.TIOCSWINSZ, struct.pack("HHHH", rows, cols, 0, 0))
     os.close(r_in)
     os.write(w_in, INPUT)

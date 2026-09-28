@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""Drive the existing compatibility suites against a local C# artifact."""
+import argparse
+import os
+import subprocess
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+REFERENCE_ROOT = Path(os.environ.get("TTFX_REFERENCE_ROOT", str(ROOT.parent))).resolve()
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("suite", choices=["oracle", "pty", "static", "cli", "python"])
+parser.add_argument("--candidate", type=Path, default=ROOT / "artifacts/linux-x64-v2/ttfx")
+parser.add_argument("--reference", type=Path, default=REFERENCE_ROOT / "target/csharp-bin/rust-0.4.0/release/ttfx")
+parser.add_argument("--reference-root", type=Path, default=REFERENCE_ROOT, help="Rust checkout containing the shared compatibility harnesses")
+parser.add_argument("--effect", default="wipe")
+parser.add_argument("--mode", choices=["quick", "full"], default="quick")
+parser.add_argument("--allow-stale", action="store_true", help="explicitly permit a stale or dirty artifact for development")
+args = parser.parse_args()
+head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+probe_env = {k: v for k, v in os.environ.items() if not k.startswith("TTFX_")}
+probe_env["TTFX_CSHARP_SHOW_BUILD"] = "1"
+probe = subprocess.run([str(args.candidate.resolve()), "--version"], capture_output=True, text=True, env=probe_env, check=True)
+match = re.search(r"revision (\S+)", probe.stderr)
+dirty = bool(subprocess.check_output(["git", "status", "--porcelain"], cwd=ROOT, text=True).strip())
+revision = match[1] if match else "unknown"
+if revision != head or dirty:
+    message = f"C# artifact revision {revision}; checkout {head}{' with uncommitted code' if dirty else ''}. Publish fresh artifacts before acceptance tests."
+    if not args.allow_stale:
+        parser.error(message + " Use --allow-stale only for development.")
+    print("warning: " + message, file=sys.stderr)
+env = {k: v for k, v in os.environ.items() if not k.startswith("TTFX_")}
+env.update(TTFX_ASM="0", RUST=str(args.candidate.resolve()),
+           REFERENCE_BIN=str(args.reference.resolve()), CANDIDATE_BIN=str(args.candidate.resolve()))
+commands = {
+    "oracle": ["tools/asm/oracle.sh", args.effect, args.mode],
+    "pty": ["python3", "tools/asm/pty_compare.py", str(args.reference.resolve()), args.effect],
+    "static": ["tools/parity/m0_matrix.sh"],
+    "cli": ["tools/tests/cli_corpus.sh"],
+    "python": ["tools/parity/run_suite.sh", args.effect],
+}
+raise SystemExit(subprocess.run(commands[args.suite], cwd=args.reference_root.resolve(), env=env).returncode)

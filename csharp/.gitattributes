@@ -1,0 +1,2 @@
+# Golden text fixtures retain the oracle's exact whitespace.
+tests/fixtures/*.txt whitespace=-blank-at-eol

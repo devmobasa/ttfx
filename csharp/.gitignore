@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+artifacts/
+
+.idea/
+
+__pycache__/
+*.pyc
+
+# Private working notes live outside this repository.
+/docs/
+/plans/
+/reviews/

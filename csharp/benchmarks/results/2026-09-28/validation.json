@@ -1,0 +1,41 @@
+{
+  "oracle_reference": "pure Rust ttfx 0.4.0 at 702b630, no default features",
+  "oracle_mode": "full",
+  "oracle_passed": {
+    "v2": 93964,
+    "v4": 93964
+  },
+  "oracle_failed": 0,
+  "compiled_output_comparisons": 222,
+  "unit_tests_passed": 26,
+  "cli_checks_passed": {
+    "v2": 1642,
+    "v4": 1642
+  },
+  "python_parity_checks": 354,
+  "static_checks": 154,
+  "best_tier": "v2",
+  "200x50_geometric_mean_vs_rust": 1.3060104085444315,
+  "200x50_faster_effects": 33,
+  "200x50_geometric_mean_vs_python_contextual": 33.22505691327403,
+  "v2_gate_ratios": {
+    "200x50": {
+      "slide": 1.6380700016582774,
+      "decrypt": 1.5618772218430923,
+      "rings": 0.9816836363884521,
+      "spotlights": 1.3120574419761366,
+      "burn": 1.7433374159882329,
+      "binarypath": 1.0733210977882457
+    },
+    "400x100": {
+      "slide": 1.638736573213142,
+      "decrypt": 1.8889059429306598,
+      "rings": 0.9436706015187049,
+      "spotlights": 1.611104546771106,
+      "burn": 1.5816006062997234,
+      "binarypath": 2.0350764497596985
+    }
+  },
+  "v2_gate_passed": true,
+  "incremental_grid_experiment": "Rejected: exact output but slower on all nine tested effects; preserved row renderer."
+}
