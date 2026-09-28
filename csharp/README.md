@@ -49,7 +49,7 @@ Current evidence includes 26 unit tests; 93,964 + 93,964 full oracle cases again
 At 200×50, the single best C# build (v2) reaches a geometric mean of
 **1.31× ttfx 0.3.3 (Rust)**, with 33 of 37 effects faster. All effects
 use the same build. [The root README](../README.md#c-performance-comparison)
-has the result summary; the [full report](benchmarks/results/2026-09-28/results.md)
+has the full Python/Rust/C# table; the [full report](benchmarks/results/2026-09-28/results.md)
 includes portable v2 and the larger-size checks. The portable-v2 gate
 passes.
 

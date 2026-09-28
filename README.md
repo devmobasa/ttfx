@@ -17,7 +17,53 @@ Rust byte-for-byte at both 200×50 and 400×100 in v2, v3, and v4. The portable
 v2 build meets the five-effect geometric-mean target and the 0.90× floor for
 all six required effects at both sizes.
 
-[Full 37-effect table, method, portable-v2 timings, and validation](csharp/benchmarks/results/2026-09-28/results.md).
+Times are milliseconds; each ratio is the reference time divided by the C# time.
+
+| Effect | Python ms | ttfx 0.3.3 (Rust) ms | C# ms | vs Rust | vs Python |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| beams | 6,868.50 | 264.50 | 124.98 | 2.12× | 55.0× |
+| binarypath | 19,198.53 | 816.06 | 760.31 | 1.07× | 25.3× |
+| blackhole | 11,795.93 | 397.96 | 398.51 | 1.00× | 29.6× |
+| bouncyballs | 9,290.29 | 380.45 | 319.14 | 1.19× | 29.1× |
+| bubbles | 14,308.26 | 563.87 | 516.47 | 1.09× | 27.7× |
+| burn | 12,803.73 | 393.85 | 225.92 | 1.74× | 56.7× |
+| colorshift | 5,807.19 | 346.30 | 220.77 | 1.57× | 26.3× |
+| crumble | 7,708.96 | 309.96 | 278.96 | 1.11× | 27.6× |
+| decrypt | 9,669.64 | 488.31 | 312.65 | 1.56× | 30.9× |
+| errorcorrect | 7,873.58 | 328.77 | 223.19 | 1.47× | 35.3× |
+| expand | 3,513.25 | 113.86 | 92.57 | 1.23× | 38.0× |
+| fireworks | 16,263.62 | 343.62 | 311.65 | 1.10× | 52.2× |
+| highlight | 1,359.95 | 50.12 | 36.77 | 1.36× | 37.0× |
+| laseretch | 18,438.05 | 617.48 | 599.62 | 1.03× | 30.7× |
+| matrix | 24,580.00 | 190.10 | 175.61 | 1.08× | 140.0× |
+| middleout | 2,505.38 | 92.43 | 67.05 | 1.38× | 37.4× |
+| orbittingvolley | 2,098.19 | 74.42 | 87.05 | 0.85× | 24.1× |
+| overflow | 2,046.52 | 115.17 | 90.84 | 1.27× | 22.5× |
+| pour | 7,186.09 | 281.85 | 246.51 | 1.14× | 29.2× |
+| print | 8,873.90 | 359.57 | 233.85 | 1.54× | 37.9× |
+| rain | 5,458.89 | 223.43 | 207.28 | 1.08× | 26.3× |
+| randomsequence | 1,124.78 | 53.54 | 33.82 | 1.58× | 33.3× |
+| rings | 12,290.51 | 637.26 | 649.15 | 0.98× | 18.9× |
+| scattered | 3,981.45 | 132.13 | 106.11 | 1.25× | 37.5× |
+| slice | 2,731.42 | 65.03 | 55.08 | 1.18× | 49.6× |
+| slide | 2,557.26 | 98.24 | 59.97 | 1.64× | 42.6× |
+| smoke | 3,493.56 | 210.67 | 145.64 | 1.45× | 24.0× |
+| spotlights | 10,727.02 | 300.78 | 229.24 | 1.31× | 46.8× |
+| spray | 3,182.08 | 148.42 | 156.25 | 0.95× | 20.4× |
+| swarm | 16,917.87 | 782.12 | 766.14 | 1.02× | 22.1× |
+| sweep | 1,553.63 | 81.35 | 54.99 | 1.48× | 28.3× |
+| synthgrid | 2,516.38 | 147.40 | 86.21 | 1.71× | 29.2× |
+| thunderstorm | 4,991.54 | 316.38 | 194.39 | 1.63× | 25.7× |
+| unstable | 4,878.91 | 188.04 | 149.29 | 1.26× | 32.7× |
+| vhstape | 6,490.20 | 289.53 | 250.16 | 1.16× | 25.9× |
+| waves | 9,303.08 | 562.12 | 286.26 | 1.96× | 32.5× |
+| wipe | 1,246.57 | 51.57 | 25.85 | 2.00× | 48.2× |
+| **Geometric mean (37 effects)** | | | | **1.31×** | **33.2×** |
+
+Blackhole's displayed 1.00× is rounded; Rust is slightly faster on that effect.
+
+[Measurement method, 400×100 gate table, raw samples, and validation](csharp/benchmarks/results/2026-09-28/results.md).
+
 The independent C# implementation, build instructions, and tests are in
 [csharp/](csharp/README.md).
 
