@@ -22,6 +22,7 @@ Times are milliseconds; each ratio is the reference time divided by the C# time.
 
 | Effect | Python ms | ttfx 0.3.3 (Rust) ms | C# ms | vs Rust | vs Python |
 | --- | ---: | ---: | ---: | ---: | ---: |
+| **Geometric mean (37 effects)** | | | | **1.31×** | **33.2×** |
 | beams | 6,868.50 | 264.50 | 124.98 | 2.12× | 55.0× |
 | binarypath | 19,198.53 | 816.06 | 760.31 | 1.07× | 25.3× |
 | blackhole | 11,795.93 | 397.96 | 398.51 | 1.00× | 29.6× |
